@@ -2,31 +2,25 @@
 @use "./styles/partials/variables" as *;
 @use "./styles/partials/mixins" as *;
 
+// body{
+//   font-family: "avenir-bold";
+// }
+
 .header {
   background-color: #323232;
-  height: 6rem;
   &__page {
-    font-size: 1.5rem;
-    height: 2rem;
-    font-weight: 700;
     display: flex;
-    &--heading {
-      font-family: "avenir-bold";
+    &--logo {
+      @include logo;
       margin: auto;
-      text-transform: uppercase;
-      color: white;
     }
   }
 
   &__sub {
-    color: white;
     display: flex;
     justify-content: space-around;
     &--heading {
-      font-family: "avenir-demi";
-      font-size: 0.875rem;
-      height: 1.375rem;
-      font-weight: 600;
+      @include sub-header-font(white);
       text-transform: uppercase;
       display: inline;
     }
@@ -46,26 +40,17 @@
     margin-left: 5%;
     &--heading {
       width: 100%;
-      font-family: avenir-bold;
-      font-size: 1.5rem;
-      height: 2rem;
-      font-weight: 700;
-      color: white;
+      @include page-header-font(white);
     }
   }
 }
 
 .musicians {
-
   &__header {
     display: inline-block;
     margin-left: 5%;
-       &--heading {
-      font-family: "avenir-bold";
-      color: #323232;
-      font-size: 1.5rem;
-      line-height: 2rem;
-      font-weight: 700;
+    &--heading {
+      @include page-header-font(#323232);
     }
   }
   &__img {
@@ -86,10 +71,7 @@
       width: 90%;
       margin-bottom: 0;
       margin-top: 0;
-      font-family: "avenir-regular";
-      color: #323232;
-      font-size: 1.1rem;
-      line-height: 1.7rem;
+      @include body-font(#323232);
     }
   }
   &__desc-header {
@@ -98,9 +80,7 @@
     &--heading {
       margin-left: 5%;
       margin-bottom: 0;
-      font-size: 1.0125rem;
-      line-height: 1.375rem;
-      font-family: "avenir-demi";
+      @include sub-header-font(#323232);
     }
   }
   &__desc-para {
@@ -112,9 +92,86 @@
     &--text {
       margin-bottom: 0;
       width: 90%;
-      font-size:1.0125rem;
-      line-height: 1.125rem;
-      font-family: "avenir-regular";
+      @include body-font(#323232);
+    }
+  }
+}
+
+.photo-gallery {
+  background-color: #e1e1e1;
+  &__header {
+    display: inline-block;
+    margin-left: 5%;
+    &--heading {
+      @include page-header-font(#323232);
+    }
+  }
+  &__img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    flex-wrap: wrap;
+    &--size {
+      width: 90%;
+      height: 13rem;
+      margin: 1rem auto;
+    }
+  }
+}
+
+.contact {
+  background-color: #323232;
+  &__header {
+    display: inline-block;
+    margin-left: 5%;
+    &--heading {
+      @include page-header-font(white);
+    }
+  }
+  &__img {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    &--size {
+      width: 2rem;
+      height: 2rem;
+      margin: 1rem;
+    }
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    &--para {
+      width: 90%;
+      margin-bottom: 0;
+      margin-top: 0;
+      @include body-font(white);
+    }
+  }
+}
+
+.footer {
+  background-color: #323232;
+  &__header {
+    display: inline-block;
+    margin-left: 5%;
+    &--heading {
+      @include page-header-font(white);
+    }
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    &--para {
+      width: 90%;
+      margin-top: 0;
+      @include footer-body-font(white);
     }
   }
 }

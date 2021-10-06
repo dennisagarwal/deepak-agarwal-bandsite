@@ -340,42 +340,43 @@ template {
 
 @font-face {
   font-family: "avenir-bold";
-  src: url(../../assets/font/AvenirNextLTPro-Bold.otf) format("otf");
+  src: url("../assets/font/AvenirNextLTPro-Bold.otf") format("otf");
 }
 @font-face {
   font-family: "avenir-regular";
-  src: url(../../assets/font/AvenirNextLTPro-Regular.otf) format("otf");
+  src: url("../../assets/font/AvenirNextLTPro-Regular.otf") format("otf");
 }
 @font-face {
   font-family: "avenir-demi";
-  src: url(../../assets/font/AvenirNextLTPro-Demi.otf) format("otf");
+  src: url("../../assets/font/AvenirNextLTPro-Demi.otf") format("otf");
 }
 .header {
   background-color: #323232;
-  height: 6rem;
 }
 .header__page {
-  font-size: 1.5rem;
-  height: 2rem;
-  font-weight: 700;
   display: flex;
 }
-.header__page--heading {
+.header__page--logo {
   font-family: "avenir-bold";
-  margin: auto;
-  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 2rem;
   color: white;
+  background-color: #323232;
+  width: 7.5rem;
+  text-transform: uppercase;
+  margin: auto;
 }
 .header__sub {
-  color: white;
   display: flex;
   justify-content: space-around;
 }
 .header__sub--heading {
   font-family: "avenir-demi";
-  font-size: 0.875rem;
-  height: 1.375rem;
   font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  color: white;
   text-transform: uppercase;
   display: inline;
 }
@@ -395,10 +396,10 @@ template {
 }
 .bees-knees__header--heading {
   width: 100%;
-  font-family: avenir-bold;
+  font-family: "avenir-bold";
+  font-weight: bold;
   font-size: 1.5rem;
-  height: 2rem;
-  font-weight: 700;
+  line-height: 2rem;
   color: white;
 }
 
@@ -408,10 +409,10 @@ template {
 }
 .musicians__header--heading {
   font-family: "avenir-bold";
-  color: #323232;
+  font-weight: bold;
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 700;
+  color: #323232;
 }
 .musicians__img {
   display: flex;
@@ -433,9 +434,10 @@ template {
   margin-bottom: 0;
   margin-top: 0;
   font-family: "avenir-regular";
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 0.875rem;
   color: #323232;
-  font-size: 1.1rem;
-  line-height: 1.7rem;
 }
 .musicians__desc-header {
   display: inline;
@@ -443,9 +445,11 @@ template {
 .musicians__desc-header--heading {
   margin-left: 5%;
   margin-bottom: 0;
-  font-size: 1.0125rem;
-  line-height: 1.375rem;
   font-family: "avenir-demi";
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  color: #323232;
 }
 .musicians__desc-para {
   display: flex;
@@ -457,7 +461,107 @@ template {
 .musicians__desc-para--text {
   margin-bottom: 0;
   width: 90%;
-  font-size: 1.0125rem;
-  line-height: 1.125rem;
   font-family: "avenir-regular";
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 0.875rem;
+  color: #323232;
+}
+
+.photo-gallery {
+  background-color: #e1e1e1;
+}
+.photo-gallery__header {
+  display: inline-block;
+  margin-left: 5%;
+}
+.photo-gallery__header--heading {
+  font-family: "avenir-bold";
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #323232;
+}
+.photo-gallery__img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.photo-gallery__img--size {
+  width: 90%;
+  height: 13rem;
+  margin: 1rem auto;
+}
+
+.contact {
+  background-color: #323232;
+}
+.contact__header {
+  display: inline-block;
+  margin-left: 5%;
+}
+.contact__header--heading {
+  font-family: "avenir-bold";
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: white;
+}
+.contact__img {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.contact__img--size {
+  width: 2rem;
+  height: 2rem;
+  margin: 1rem;
+}
+.contact__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+.contact__text--para {
+  width: 90%;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-family: "avenir-regular";
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 0.875rem;
+  color: white;
+}
+
+.footer {
+  background-color: #323232;
+}
+.footer__header {
+  display: inline-block;
+  margin-left: 5%;
+}
+.footer__header--heading {
+  font-family: "avenir-bold";
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: white;
+}
+.footer__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer__text--para {
+  width: 90%;
+  margin-top: 0;
+  font-family: "avenir-regular";
+  font-weight: normal;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  color: white;
 }/*# sourceMappingURL=bio.css.map */
