@@ -1,4 +1,4 @@
-@use "variables" as *;
+@use "./variables" as *;
 
 @mixin tablet {
   @media screen and (min-width: $tablet-breakpoint) {
@@ -10,4 +10,19 @@
   @media screen and (min-width: $desktop-breakpoint) {
     @content;
   }
+}
+
+@font-face {
+  font-family: 'avenir-bold';
+  src: url(../../assets/font/AvenirNextLTPro-Bold.otf)format("otf");
+}
+
+@font-face {
+  font-family: 'avenir-regular';
+  src: url(../../assets/font/AvenirNextLTPro-Regular.otf)format("otf");
+}
+
+@font-face {
+  font-family: 'avenir-demi';
+  src: url(../../assets/font/AvenirNextLTPro-Demi.otf)format("otf");
 }
