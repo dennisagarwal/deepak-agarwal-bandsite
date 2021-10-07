@@ -352,10 +352,13 @@ template {
 }
 .header {
   background-color: #323232;
+  display: flex;
+  flex-direction: column;
 }
 @media screen and (min-width: 767px) {
   .header {
     display: flex;
+    flex-direction: row;
     align-items: center;
   }
 }
@@ -376,13 +379,17 @@ template {
   display: flex;
   justify-content: space-around;
 }
+@media screen and (min-width: 767px) {
+  .header__sub {
+    justify-content: space-around;
+  }
+}
 .header__sub--heading {
   font-family: "avenir-demi";
   font-weight: 600;
   font-size: 0.875rem;
   line-height: 1.375rem;
   color: white;
-  text-transform: uppercase;
   display: inline;
 }
 @media screen and (min-width: 767px) {
@@ -411,6 +418,12 @@ template {
     margin-bottom: 1.5rem;
   }
 }
+.bees-knees__header {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 @media screen and (min-width: 767px) {
   .bees-knees__header {
     padding-top: 3rem;
@@ -437,6 +450,12 @@ template {
   }
 }
 
+.musicians__header {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 @media screen and (min-width: 767px) {
   .musicians__header {
     padding-top: 3rem;
@@ -464,6 +483,14 @@ template {
     margin: 0;
   }
 }
+.musicians__img {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 0;
+  padding-top: 0;
+}
 @media screen and (min-width: 767px) {
   .musicians__img {
     padding-top: 3rem;
@@ -487,6 +514,10 @@ template {
 }
 .musicians__text {
   flex-wrap: wrap;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 @media screen and (min-width: 767px) {
   .musicians__text {
@@ -508,6 +539,8 @@ template {
   font-size: 1.125rem;
   line-height: 0.875rem;
   color: #323232;
+  line-height: 1.7rem;
+  font-weight: bold;
 }
 @media screen and (min-width: 767px) {
   .musicians__text--para {
@@ -517,6 +550,14 @@ template {
     line-height: 1.375rem;
     color: #323232;
   }
+}
+.musicians__desc-header {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 @media screen and (min-width: 767px) {
   .musicians__desc-header {
@@ -536,6 +577,8 @@ template {
   font-size: 0.875rem;
   line-height: 1.375rem;
   color: #323232;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 @media screen and (min-width: 767px) {
   .musicians__desc-header--heading {
@@ -544,6 +587,7 @@ template {
     font-size: 1.5rem;
     line-height: 2rem;
     color: #323232;
+    margin-top: 0;
     margin-bottom: 0;
   }
 }
@@ -551,6 +595,10 @@ template {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 @media screen and (min-width: 767px) {
   .musicians__desc-para {
@@ -565,6 +613,9 @@ template {
   font-size: 1.125rem;
   line-height: 0.875rem;
   color: #323232;
+  line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 @media screen and (min-width: 767px) {
   .musicians__desc-para--text {
@@ -586,6 +637,13 @@ template {
 
 .photo-gallery {
   background-color: #e1e1e1;
+}
+.photo-gallery__header {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 0;
 }
 @media screen and (min-width: 767px) {
   .photo-gallery__header {
@@ -617,6 +675,10 @@ template {
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 @media screen and (min-width: 767px) {
   .photo-gallery__img {
@@ -631,6 +693,10 @@ template {
     justify-content: space-evenly;
   }
 }
+.photo-gallery__img--size {
+  width: 100%;
+  margin-bottom: 1rem;
+}
 @media screen and (min-width: 767px) {
   .photo-gallery__img--size {
     margin-bottom: 2rem;
@@ -642,15 +708,22 @@ template {
   background-color: #323232;
 }
 @media screen and (min-width: 767px) {
+  .contact {
+    position: relative;
+  }
+}
+@media screen and (min-width: 767px) {
   .contact__header {
-    padding-top: 3rem;
-    padding-bottom: 2.25rem;
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
+    display: inline-block;
+    padding-top: 0;
     padding-bottom: 0;
   }
 }
 .contact__header--heading {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   font-family: "avenir-bold";
   font-weight: bold;
   font-size: 1.5rem;
@@ -659,20 +732,29 @@ template {
 }
 @media screen and (min-width: 767px) {
   .contact__header--heading {
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
     font-family: "avenir-demi";
     font-weight: 600;
     font-size: 1.5rem;
     line-height: 2rem;
     color: white;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 .contact__img {
   display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 @media screen and (min-width: 767px) {
   .contact__img {
+    display: inline-block;
     padding-top: 3rem;
     padding-bottom: 2.25rem;
     padding-left: 2.25rem;
@@ -689,13 +771,18 @@ template {
 .contact__div {
   display: flex;
   flex-direction: column;
-  height: 9rem;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: space-between;
+  height: 35rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 @media screen and (min-width: 767px) {
   .contact__div {
+    height: 9rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
     padding-top: 3rem;
     padding-bottom: 2.25rem;
     padding-left: 2.25rem;
@@ -705,8 +792,13 @@ template {
 .contact__div-text {
   display: flex;
   flex-direction: column;
-  width: 30%;
-  margin: 0;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 767px) {
+  .contact__div-text {
+    width: 30%;
+    margin: 0;
+  }
 }
 .contact__div-text--para {
   margin: 0;
@@ -715,6 +807,7 @@ template {
   font-size: 1.125rem;
   line-height: 0.875rem;
   color: white;
+  line-height: 1.3rem;
 }
 @media screen and (min-width: 767px) {
   .contact__div-text--para {
@@ -725,33 +818,69 @@ template {
     color: white;
   }
 }
-
-.footer {
+.contact-footer {
   background-color: #323232;
 }
-.footer__header {
-  display: inline-block;
-  margin-left: 5%;
-}
-.footer__header--heading {
+.contact-footer__header {
   font-family: "avenir-bold";
   font-weight: bold;
   font-size: 1.5rem;
   line-height: 2rem;
   color: white;
+  background-color: #323232;
+  width: 7.5rem;
+  text-transform: uppercase;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 0;
 }
-.footer__text {
+@media screen and (min-width: 767px) {
+  .contact-footer__header {
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    position: absolute;
+    right: 3rem;
+    top: 1rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+.contact-footer__text {
   display: flex;
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
 }
-.footer__text--para {
-  width: 90%;
-  margin-top: 0;
+.contact-footer__text--para {
+  width: 100%;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   font-family: "avenir-regular";
   font-weight: normal;
   font-size: 0.8125rem;
   line-height: 1.125rem;
   color: white;
+  padding-top: 0;
+  margin: 0;
+}
+@media screen and (min-width: 767px) {
+  .contact-footer__text--para {
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    font-family: "avenir-regular";
+    font-weight: normal;
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+    color: white;
+  }
 }/*# sourceMappingURL=bio.css.map */

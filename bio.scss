@@ -4,8 +4,11 @@
 
 .header {
   background-color: #323232;
+  display: flex;
+  flex-direction: column;
   @include tablet {
     display: flex;
+    flex-direction: row;
     align-items: center;
   }
   &__page {
@@ -20,9 +23,11 @@
   &__sub {
     display: flex;
     justify-content: space-around;
+    @include tablet {
+      justify-content: space-around;
+    }
     &--heading {
       @include mob-sub-header-font(white);
-      text-transform: uppercase;
       display: inline;
       @include tablet {
         @include tab-body-font(white);
@@ -45,6 +50,7 @@
     margin-bottom: 1.5rem;
   }
   &__header {
+    @include mobile-padding;
     @include tablet {
       @include tablet-padding;
     }
@@ -60,6 +66,7 @@
 
 .musicians {
   &__header {
+    @include mobile-padding;
     @include tablet {
       @include tablet-padding;
       padding-bottom: 0;
@@ -74,6 +81,9 @@
     }
   }
   &__img {
+    @include mobile-padding;
+    padding-bottom: 0;
+    padding-top: 0;
     @include tablet {
       @include tablet-padding;
       padding-left: 4.25rem;
@@ -91,6 +101,7 @@
   }
   &__text {
     flex-wrap: wrap;
+    @include mobile-padding;
     @include tablet {
       @include tablet-padding;
       padding-left: 4.25rem;
@@ -103,26 +114,32 @@
       margin-bottom: 0;
       margin-top: 0;
       @include mob-body-font(#323232);
+      line-height: 1.7rem;
+      font-weight: bold;
       @include tablet {
         @include tab-body-font(#323232);
       }
     }
   }
   &__desc-header {
+    @include mobile-padding;
+    padding-top: 0;
+    padding-bottom: 0;
     @include tablet {
       @include tablet-padding;
       padding-left: 4.25rem;
       padding-right: 4.25rem;
       padding-top: 0;
       padding-bottom: 0;
-
     }
-
 
     &--heading {
       @include mob-sub-header-font(#323232);
+      margin-top: 0;
+      margin-bottom: 0;
       @include tablet {
         @include tab-sub-header-font(#323232);
+        margin-top: 0;
         margin-bottom: 0;
       }
     }
@@ -131,20 +148,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include mobile-padding;
+
     @include tablet {
       display: flex;
       flex-direction: row;
       align-items: center;
-
     }
     &--text {
       @include mob-body-font(#323232);
+      line-height: 1.5;
+      margin-top: 0;
+      margin-bottom: 0;
       @include tablet {
         @include tablet-padding;
         padding-left: 4.25rem;
         padding-right: 4.25rem;
         padding-top: 0;
-      padding-bottom: 0;
+        padding-bottom: 0;
         @include tab-body-font(#323232);
       }
     }
@@ -154,6 +175,8 @@
 .photo-gallery {
   background-color: #e1e1e1;
   &__header {
+    @include mobile-padding;
+    padding-bottom: 0;
     @include tablet {
       @include tablet-padding;
       padding-bottom: 0;
@@ -170,6 +193,7 @@
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
+    @include mobile-padding;
     @include tablet {
       @include tablet-padding;
       padding-top: 0;
@@ -177,9 +201,10 @@
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
-      // flex-wrap: wrap;
     }
     &--size {
+      width: 100%;
+      margin-bottom: 1rem;
       @include tablet {
         margin-bottom: 2rem;
         width: 28%;
@@ -190,28 +215,36 @@
 
 .contact {
   background-color: #323232;
+  @include tablet {
+    position: relative;
+  }
   &__header {
     @include tablet {
-      @include tablet-padding;
-padding-bottom: 0;
+      display: inline-block;
+      padding-top: 0;
+      padding-bottom: 0;
     }
     &--heading {
+      @include mobile-padding;
       @include mob-page-header-font(white);
       @include tablet {
-        // @include tablet-padding;
+        @include tablet-padding;
         @include tab-sub-header-font(white);
+        margin-top: 0;
+        margin-bottom: 0;
+
       }
     }
   }
   &__img {
     display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+
+    @include mobile-padding;
     @include tablet {
+      display: inline-block;
       @include tablet-padding;
       padding-top: 0;
       padding-bottom: 0;
-
     }
     &--size {
       width: 2rem;
@@ -222,50 +255,70 @@ padding-bottom: 0;
   &__div {
     display: flex;
     flex-direction: column;
-    height: 9rem;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: space-between;
 
-    // align-items: center;
+    height: 35rem;
+    @include mobile-padding;
+
     @include tablet {
+      height: 9rem;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-content: space-between;
       @include tablet-padding;
     }
     &-text {
       display: flex;
       flex-direction: column;
-      width: 30%;
-      margin: 0;
-
+      margin-bottom: 2rem;
+      @include tablet {
+        width: 30%;
+        margin: 0;
+      }
       &--para {
         margin: 0;
         @include mob-body-font(white);
+        line-height: 1.3rem;
         @include tablet {
           @include tab-body-font(white);
         }
       }
     }
   }
-}
 
-.footer {
-  background-color: #323232;
-  &__header {
-    display: inline-block;
-    margin-left: 5%;
-    &--heading {
-      @include mob-page-header-font(white);
+  &-footer {
+    background-color: #323232;
+    &__header {
+      @include logo;
+      @include mobile-padding;
+      padding-bottom: 0;
+      @include tablet {
+        @include tablet-padding;
+        position: absolute;
+        right: 3rem;
+        top: 1rem;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+
+      }
     }
-  }
-  &__text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    &--para {
-      width: 90%;
-      margin-top: 0;
-      @include mob-footer-body-font(white);
+    &__text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+      &--para {
+        width: 100%;
+        @include mobile-padding;
+        @include mob-footer-body-font(white);
+        padding-top: 0;
+        margin: 0;
+        @include tablet {
+          @include tablet-padding;
+          @include tab-footer-body-font($color: white);
+        }
+      }
     }
   }
 }
