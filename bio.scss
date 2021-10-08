@@ -3,10 +3,6 @@
 @use "./styles/partials/mixins" as *;
 
 
-body{
-  font-family: 'AvenirNext LT Pro',"sans-serif";
-  background-color: yellow;
-}
 .header {
   background-color: #323232;
   display: flex;
@@ -238,12 +234,12 @@ body{
       }
 
       &--text {
-        // @include mob-body-font(#323232);
+        @include mob-body-font(#323232);
         line-height: 1.5;
         margin-top: 0;
         margin-bottom: 0;
         @include tablet {
-          // @include tab-body-font(#323232);
+          @include tab-body-font(#323232);
         }
       }
     }
