@@ -339,17 +339,31 @@ template {
 }
 
 @font-face {
-  font-family: "avenir-bold";
-  src: url("../assets/font/AvenirNextLTPro-Bold.otf") format("otf");
+  font-family: "AvenirNext LT Pro";
+  src: url("./assets/font/AvenirNextLTPro-Bold.woff2") format("woff2"), url("./assets/font/AvenirNextLTPro-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: "avenir-regular";
-  src: url("../../assets/font/AvenirNextLTPro-Regular.otf") format("otf");
+  font-family: "AvenirNext LT Pro";
+  src: url("./assets/font/AvenirNextLTPro-Demi.woff2") format("woff2"), url("./assets/font/AvenirNextLTPro-Demi.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: "avenir-demi";
-  src: url("../../assets/font/AvenirNextLTPro-Demi.otf") format("otf");
+  font-family: "AvenirNext LT Pro";
+  src: url("./assets/font/AvenirNextLTPro-Regular.woff2") format("woff2"), url("./assets/font/AvenirNextLTPro-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
+body {
+  font-family: "AvenirNext LT Pro", "sans-serif";
+  background-color: yellow;
+}
+
 .header {
   background-color: #323232;
   display: flex;
@@ -442,6 +456,7 @@ template {
 }
 
 .bees-knees {
+  position: relative;
   width: 100%;
   height: 18rem;
   background-image: url("./assets/images/hero-bio.jpg");
@@ -449,7 +464,6 @@ template {
   background-size: cover;
   display: flex;
   align-items: center;
-  opacity: 0.6;
 }
 @media screen and (min-width: 767px) {
   .bees-knees {
@@ -463,7 +477,6 @@ template {
   }
 }
 .bees-knees__header {
-  position: relative;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
   padding-left: 1rem;
@@ -483,10 +496,7 @@ template {
   }
 }
 .bees-knees__header--heading {
-  position: absolute;
-  z-index: 10;
   width: 100%;
-  opacity: 1;
   font-family: "avenir-bold";
   font-weight: bold;
   font-size: 1.5rem;
@@ -713,25 +723,10 @@ template {
   }
 }
 .musicians__desc-para--text {
-  font-family: "avenir-regular";
-  font-weight: normal;
-  font-size: 1.125rem;
-  line-height: 0.875rem;
-  color: #323232;
   line-height: 1.5;
   margin-top: 0;
   margin-bottom: 0;
 }
-@media screen and (min-width: 767px) {
-  .musicians__desc-para--text {
-    font-family: "avenir-regular";
-    font-weight: normal;
-    font: size 0.875rem;
-    line-height: 1.375rem;
-    color: #323232;
-  }
-}
-
 .photo-gallery {
   background-color: #e1e1e1;
   padding-top: 1.5rem;

@@ -11,21 +11,47 @@
     @content;
   }
 }
-
 @font-face {
-  font-family: "avenir-bold";
-  src: url("../assets/font/AvenirNextLTPro-Bold.otf") format("otf");
+  font-family: 'AvenirNext LT Pro';
+  src: url('./assets/font/AvenirNextLTPro-Bold.woff2') format('woff2'),
+      url('./assets/font/AvenirNextLTPro-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "avenir-regular";
-  src: url("../../assets/font/AvenirNextLTPro-Regular.otf") format("otf");
+  font-family: 'AvenirNext LT Pro';
+  src: url('./assets/font/AvenirNextLTPro-Demi.woff2') format('woff2'),
+      url('./assets/font/AvenirNextLTPro-Demi.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "avenir-demi";
-  src: url("../../assets/font/AvenirNextLTPro-Demi.otf") format("otf");
+  font-family: 'AvenirNext LT Pro';
+  src: url('./assets/font/AvenirNextLTPro-Regular.woff2') format('woff2'),
+      url('./assets/font/AvenirNextLTPro-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
+
+// @font-face {
+//   font-family: "avenir-bold";
+//   src: url("./assets/font/AvenirNextLTPro-Bold.otf") format("otf");
+// }
+
+// @font-face {
+//   font-family: "avenir-regular";
+//   src: url("./assets/font/AvenirNextLTPro-Regular.otf") format("otf");
+// }
+
+// @font-face {
+//   font-family: "avenir-demi";
+//   src: url("./assets/font/AvenirNextLTPro-Demi.otf") format("otf");
+// }
 
 @mixin logo {
   font-family: "avenir-bold";
