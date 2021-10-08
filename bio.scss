@@ -11,12 +11,22 @@
     flex-direction: row;
     align-items: center;
   }
+  @include desktop {
+    height: 15vh;
+  }
   &__page {
     &--logo {
       @include logo;
       margin: auto;
-      padding-left: 2rem;
-      padding-right: 3rem;
+      @include mobile-padding;
+      @include tablet {
+        @include tablet-padding;
+        @include desktop {
+          padding-left: 8rem;
+          padding-bottom: 0;
+          padding-top: 0;
+        }
+      }
     }
   }
 
@@ -49,10 +59,16 @@
     height: 26rem;
     margin-bottom: 1.5rem;
   }
+  @include desktop {
+    height: 85vh;
+  }
   &__header {
     @include mobile-padding;
     @include tablet {
       @include tablet-padding;
+    }
+    @include desktop {
+      padding-left: 8rem;
     }
     &--heading {
       width: 100%;
@@ -72,6 +88,12 @@
       padding-bottom: 0;
       padding-top: 0;
     }
+    @include desktop {
+      padding-left: 8rem;
+      padding-right: 8rem;
+      padding-bottom: 0;
+      padding-top: 3.25rem;
+    }
     &--heading {
       @include mob-section-header-font(#323232);
       @include tablet {
@@ -89,6 +111,11 @@
       padding-left: 4.25rem;
       padding-right: 4.25rem;
       padding-top: 1rem;
+    }
+    @include desktop {
+      padding-left: 13rem;
+      padding-right: 13rem;
+      padding-top: 3.25rem;
     }
     &--size {
       width: 100%;
@@ -109,6 +136,11 @@
       padding-top: 0;
       padding-bottom: 0;
     }
+    @include desktop {
+      padding-left: 13rem;
+      padding-right: 13rem;
+      padding-bottom: 3rem;
+    }
 
     &--para {
       margin-bottom: 0;
@@ -121,18 +153,23 @@
       }
     }
   }
-  &__desc-header {
-    @include mobile-padding;
-    padding-top: 0;
-    padding-bottom: 0;
+  &__desc{
     @include tablet {
-      @include tablet-padding;
       padding-left: 4.25rem;
       padding-right: 4.25rem;
+      padding-top: 2rem;
+      padding-bottom: 0;
+    }
+    @include desktop {
+      padding-left: 13rem;
+      padding-right: 13rem;
       padding-top: 0;
       padding-bottom: 0;
     }
-
+    &-header {
+    @include mobile-padding;
+    padding-top: 0;
+    padding-bottom: 0;
     &--heading {
       @include mob-sub-header-font(#323232);
       margin-top: 0;
@@ -144,7 +181,8 @@
       }
     }
   }
-  &__desc-para {
+
+  &-para {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -155,32 +193,34 @@
       flex-direction: row;
       align-items: center;
     }
+
     &--text {
       @include mob-body-font(#323232);
       line-height: 1.5;
       margin-top: 0;
       margin-bottom: 0;
       @include tablet {
-        @include tablet-padding;
-        padding-left: 4.25rem;
-        padding-right: 4.25rem;
-        padding-top: 0;
-        padding-bottom: 0;
-        @include tab-body-font(#323232);
+         @include tab-body-font(#323232);
       }
+
+
     }
   }
 }
-
+}
 .photo-gallery {
+
   background-color: #e1e1e1;
+  @include mobile-padding;
+  @include tablet {
+    @include tablet-padding;
+  }
+  @include desktop {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
   &__header {
-    @include mobile-padding;
-    padding-bottom: 0;
-    @include tablet {
-      @include tablet-padding;
-      padding-bottom: 0;
-    }
+
     &--heading {
       @include mob-page-header-font(#323232);
       @include tablet {
@@ -193,21 +233,17 @@
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    @include mobile-padding;
     @include tablet {
-      @include tablet-padding;
-      padding-top: 0;
-      padding-bottom: 0;
       display: flex;
       flex-direction: row;
-      justify-content: space-evenly;
+      justify-content: space-between;
     }
     &--size {
       width: 100%;
       margin-bottom: 1rem;
       @include tablet {
         margin-bottom: 2rem;
-        width: 28%;
+        width: 30%;
       }
     }
   }
@@ -216,7 +252,12 @@
 .contact {
   background-color: #323232;
   @include tablet {
+    @include tablet-padding;
     position: relative;
+  }
+  @include desktop {
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
   &__header {
     @include tablet {
@@ -228,11 +269,10 @@
       @include mobile-padding;
       @include mob-page-header-font(white);
       @include tablet {
-        @include tablet-padding;
+        // @include tablet-padding;
         @include tab-sub-header-font(white);
         margin-top: 0;
         margin-bottom: 0;
-
       }
     }
   }
@@ -242,7 +282,7 @@
     @include mobile-padding;
     @include tablet {
       display: inline-block;
-      @include tablet-padding;
+      // @include tablet-padding;
       padding-top: 0;
       padding-bottom: 0;
     }
@@ -255,16 +295,18 @@
   &__div {
     display: flex;
     flex-direction: column;
-
     height: 35rem;
     @include mobile-padding;
-
     @include tablet {
-      height: 9rem;
+      height:8rem;
+      // width: 100%;
       flex-wrap: wrap;
       justify-content: space-between;
       align-content: space-between;
-      @include tablet-padding;
+    }
+    @include desktop {
+      height:8rem;
+      width: 60%;
     }
     &-text {
       display: flex;
@@ -274,12 +316,15 @@
         width: 30%;
         margin: 0;
       }
+      @include desktop {
+        width: 26%;
+      }
       &--para {
         margin: 0;
-        @include mob-body-font(white);
+        @include mob-footer-body-font($color: white);
         line-height: 1.3rem;
         @include tablet {
-          @include tab-body-font(white);
+          @include tab-footer-body-font($color: white);
         }
       }
     }
@@ -292,15 +337,17 @@
       @include mobile-padding;
       padding-bottom: 0;
       @include tablet {
-        @include tablet-padding;
+        // @include tablet-padding;
         position: absolute;
-        right: 3rem;
-        top: 1rem;
+        right: 5.25rem;
+        top: 1.3rem;
         padding-top: 0;
         padding-bottom: 0;
         margin-top: 0;
         margin-bottom: 0;
-
+      }
+      @include desktop {
+        right: 11.25rem;
       }
     }
     &__text {
@@ -315,7 +362,7 @@
         padding-top: 0;
         margin: 0;
         @include tablet {
-          @include tablet-padding;
+          // @include tablet-padding;
           @include tab-footer-body-font($color: white);
         }
       }
