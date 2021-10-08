@@ -449,6 +449,7 @@ template {
   background-size: cover;
   display: flex;
   align-items: center;
+  opacity: 0.6;
 }
 @media screen and (min-width: 767px) {
   .bees-knees {
@@ -462,6 +463,7 @@ template {
   }
 }
 .bees-knees__header {
+  position: relative;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
   padding-left: 1rem;
@@ -481,7 +483,10 @@ template {
   }
 }
 .bees-knees__header--heading {
+  position: absolute;
+  z-index: 10;
   width: 100%;
+  opacity: 1;
   font-family: "avenir-bold";
   font-weight: bold;
   font-size: 1.5rem;
@@ -778,6 +783,7 @@ template {
   }
 }
 .photo-gallery__img--size {
+  filter: grayscale(1);
   width: 100%;
   margin-bottom: 1rem;
 }
@@ -786,6 +792,9 @@ template {
     margin-bottom: 2rem;
     width: 30%;
   }
+}
+.photo-gallery__img :hover {
+  filter: grayscale(0);
 }
 
 .contact {
@@ -910,6 +919,9 @@ template {
     line-height: 1.25rem;
     color: white;
   }
+}
+.contact__div-text--link {
+  text-decoration: none;
 }
 .contact-footer {
   background-color: #323232;
