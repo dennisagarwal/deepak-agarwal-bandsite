@@ -155,11 +155,12 @@
     }
     @include desktop {
       padding-left: 13rem;
-      padding-right: 13rem;
+      padding-right: 24rem;
       padding-bottom: 3rem;
+
     }
 
-    &--para {
+    &--para1 {
       margin-bottom: 0;
       margin-top: 0;
       @include mob-body-font(#323232);
@@ -167,7 +168,25 @@
       font-weight: bold;
       @include tablet {
         @include tab-body-font(#323232);
+        font-size: 1.6rem;
+       line-height: 1.7;
+       font-weight: bold;
       }
+
+    }
+    &--para2{
+      margin-bottom: 0;
+      margin-top: 0;
+      @include mob-body-font(#323232);
+      line-height: 1.7rem;
+      font-weight: bold;
+      @include tablet {
+        @include tab-body-font(#323232);
+        font-size: 1.3rem;
+       line-height: 1.7;
+       font-weight: bold;
+      }
+
     }
   }
   &__desc {
