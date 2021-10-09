@@ -1,5 +1,6 @@
 @use "./styles/partials/normalize" as *;
 @use "./styles/partials/variables" as *;
+@use "./styles/partials/typography" as *;
 @use "./styles/partials/mixins" as *;
 
 
@@ -66,10 +67,10 @@
 }
 
 .bees-knees {
-  position: relative;
+  overflow: hidden;
   width: 100%;
   height: 18rem;
-  background-image: url("./assets/images/hero-bio.jpg");
+  background: linear-gradient(rgba($primary-color1,0.5),rgba($primary-color1,0.5)) ,url('./assets/images/hero-bio.jpg');
   background-position: center;
   background-size: cover;
   display: flex;
