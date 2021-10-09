@@ -1,4 +1,5 @@
 @use "./variables" as *;
+@use "./typograpgy" as *;
 
 @mixin tablet {
   @media screen and (min-width: $tablet-breakpoint) {
@@ -11,47 +12,8 @@
     @content;
   }
 }
-// @font-face {
-//   font-family: 'AvenirNext LT Pro';
-//   src: url('./assets/font/AvenirNextLTPro-Bold.woff2') format('woff2'),
-//       url('./assets/font/AvenirNextLTPro-Bold.woff') format('woff');
-//   font-weight: bold;
-//   font-style: normal;
-//   font-display: swap;
-// }
 
-// @font-face {
-//   font-family: 'AvenirNext LT Pro';
-//   src: url('./assets/font/AvenirNextLTPro-Demi.woff2') format('woff2'),
-//       url('./assets/font/AvenirNextLTPro-Demi.woff') format('woff');
-//   font-weight: bold;
-//   font-style: normal;
-//   font-display: swap;
-// }
 
-// @font-face {
-//   font-family: 'AvenirNext LT Pro';
-//   src: url('./assets/font/AvenirNextLTPro-Regular.woff2') format('woff2'),
-//       url('./assets/font/AvenirNextLTPro-Regular.woff') format('woff');
-//   font-weight: normal;
-//   font-style: normal;
-//   font-display: swap;
-// }
-
-@font-face {
-  font-family: "avenir-bold";
-  src: url("./assets/font/AvenirNextLTPro-Bold.otf");
-}
-
-@font-face {
-  font-family: "avenir-regular";
-  src: url("./assets/font/AvenirNextLTPro-Regular.otf");
-}
-
-@font-face {
-  font-family: "avenir-demi";
-  src: url("./assets/font/AvenirNextLTPro-Demi.otf");
-}
 
 @mixin logo {
   font-family: "avenir-bold";
@@ -59,7 +21,7 @@
   font-size: 1.5rem;
   line-height: 2rem;
   color: white;
-  background-color: #323232;
+  // background-color: #323232;
   width: 7.5rem;
   text-transform: uppercase;
 }
