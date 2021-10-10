@@ -367,22 +367,25 @@ template {
     height: 15vh;
   }
 }
-.header__page--logo {
-  font-family: "avenir-bold";
+.header__nav {
+  margin: 1rem auto;
+}
+.header__nav--logo {
+  text-decoration: none;
+  font-family: "avenir-regular";
   font-weight: bold;
   font-size: 1.5rem;
   line-height: 2rem;
   color: white;
   width: 7.5rem;
   text-transform: uppercase;
-  margin: auto;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 @media screen and (min-width: 767px) {
-  .header__page--logo {
+  .header__nav--logo {
     padding-top: 3rem;
     padding-bottom: 2.25rem;
     padding-left: 2.25rem;
@@ -390,58 +393,73 @@ template {
   }
 }
 @media screen and (min-width: 767px) and (min-width: 1280px) {
-  .header__page--logo {
+  .header__nav--logo {
     padding-left: 8rem;
     padding-bottom: 0;
     padding-top: 0;
   }
 }
-.header__nav {
+.header__primary-nav {
+  display: flex;
+  width: 100%;
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.header__primary-nav-list {
   list-style: none;
   display: flex;
+  width: 100%;
   justify-content: space-around;
-  align-content: center;
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.header__nav :hover {
   color: white;
-  border-bottom: 0.2rem solid #ffffff;
 }
-.header__nav--heading {
-  width: 50%;
+@media screen and (min-width: 767px) {
+  .header__primary-nav-list {
+    align-items: center;
+    justify-content: center;
+    width: 13%;
+    display: flex;
+    height: 6.18rem;
+    padding-bottom: 0rem;
+    border-bottom: 0rem;
+  }
+}
+.header__primary-nav-list--anchor {
+  height: 1rem;
   text-align: center;
   display: inline-block;
-  padding-bottom: 1.4rem;
-  border-bottom: 0.2rem solid #323232;
+  vertical-align: middle;
+  width: 100%;
+  justify-content: center;
+  text-decoration: none;
   font-family: "avenir-regular";
   font-weight: normal;
   font-size: 1.125rem;
   line-height: 0.875rem;
   color: white;
+  padding-bottom: 1rem;
 }
 @media screen and (min-width: 767px) {
-  .header__nav--heading {
-    font-family: "avenir-regular";
-    font-weight: normal;
-    font: size 0.875rem;
-    line-height: 1.375rem;
-    color: white;
-    padding-top: 3.2rem;
-    padding-bottom: 2.6rem;
-    margin-right: 1rem;
-    margin-left: 1rem;
+  .header__primary-nav-list--anchor {
+    width: auto;
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  .header__nav--heading {
+  .header__primary-nav-list--anchor {
     padding-top: 2.8rem;
+    padding-bottom: 2.8rem;
   }
+}
+.header__primary-nav-list :hover {
+  color: pink;
+}
+.header__primary-nav-list--current {
+  border-bottom: 0.2rem solid #ffffff;
 }
 
 .bees-knees {
-  overflow: hidden;
   width: 100%;
   height: 18rem;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/images/hero-bio.jpg");
@@ -922,7 +940,7 @@ template {
   background-color: #323232;
 }
 .contact-footer__header {
-  font-family: "avenir-bold";
+  font-family: "avenir-regular";
   font-weight: bold;
   font-size: 1.5rem;
   line-height: 2rem;

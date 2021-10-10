@@ -3,7 +3,6 @@
 @use "./styles/partials/typography" as *;
 @use "./styles/partials/mixins" as *;
 
-
 .header {
   background-color: #323232;
   display: flex;
@@ -12,14 +11,17 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    // justify-content: flex-start;
   }
   @include desktop {
     height: 15vh;
   }
-  &__page {
+  &__nav {
+    margin: 1rem auto;
+
     &--logo {
+      text-decoration: none;
       @include logo;
-      margin: auto;
       @include mobile-padding;
       @include tablet {
         @include tablet-padding;
@@ -32,45 +34,73 @@
     }
   }
 
-  &__nav {
-    list-style: none;
+  &__primary-nav {
     display: flex;
-    justify-content: space-around;
-    align-content: center;
+    width: 100%;
     padding-left: 0;
-    margin-top: 0;
     margin-bottom: 0;
-    :hover {
+    margin-top: 0;
+    &-list {
+      list-style: none;
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
       color: white;
-      border-bottom: 0.2rem solid #ffffff;
-    }
-    &--heading {
-      width: 50%;
-      text-align: center;
-      display: inline-block;
-      padding-bottom:1.4rem;
-      border-bottom: 0.2rem solid #323232;
-      @include mob-body-font(white);
 
       @include tablet {
-        @include tab-body-font(white);
-        padding-top: 3.2rem;
-        padding-bottom:2.6rem;
-        margin-right: 1rem;
-        margin-left: 1rem;
+        align-items: center;
+        justify-content: center;
+        width: 13%;
+        display: flex;
+        height: 6.18rem;
+        padding-bottom: 0rem;
+        border-bottom: 0rem;
       }
-      @include desktop {
-        padding-top:  2.8rem;
+      // @include desktop {
+      //   width: 9%;
+      // }
+      &--anchor {
+        height: 1rem;
+        text-align: center;
+        display: inline-block;
+          vertical-align: middle;
+        width: 100%;
+        // display: flex;
+        // margin-bottom: 1.7rem;
+        // padding-top: 2.9rem;
+        // height:4.0rem;
+        justify-content: center;
+        text-decoration: none;
+        @include mob-body-font(white);
+        padding-bottom: 1rem;
+        @include tablet {
+         width: auto;
+          padding-top: 2.4rem;
+          padding-bottom: 2.4rem;
+        }
+        @include desktop{
+          padding-top: 2.8rem;
+          padding-bottom: 2.8rem;
+        }
+      }
+      :hover {
+        color: pink;
+      }
+      &--current {
+        border-bottom: 0.2rem solid #ffffff;
       }
     }
   }
 }
 
 .bees-knees {
-  overflow: hidden;
   width: 100%;
   height: 18rem;
-  background: linear-gradient(rgba($primary-color1,0.5),rgba($primary-color1,0.5)) ,url('./assets/images/hero-bio.jpg');
+  background: linear-gradient(
+      rgba($primary-color1, 0.5),
+      rgba($primary-color1, 0.5)
+    ),
+    url("./assets/images/hero-bio.jpg");
   background-position: center;
   background-size: cover;
   display: flex;
@@ -161,7 +191,6 @@
       padding-left: 13rem;
       padding-right: 24rem;
       padding-bottom: 3rem;
-
     }
 
     &--para1 {
@@ -173,12 +202,11 @@
       @include tablet {
         @include tab-body-font(#323232);
         font-size: 1.6rem;
-       line-height: 1.7;
-       font-weight: bold;
+        line-height: 1.7;
+        font-weight: bold;
       }
-
     }
-    &--para2{
+    &--para2 {
       margin-bottom: 0;
       margin-top: 0;
       @include mob-body-font(#323232);
@@ -187,10 +215,9 @@
       @include tablet {
         @include tab-body-font(#323232);
         font-size: 1.3rem;
-       line-height: 1.7;
-       font-weight: bold;
+        line-height: 1.7;
+        font-weight: bold;
       }
-
     }
   }
   &__desc {
@@ -265,7 +292,6 @@
     }
   }
   &__img {
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -283,7 +309,8 @@
         margin-bottom: 2rem;
         width: 30%;
       }
-    }:hover{
+    }
+    :hover {
       filter: grayscale(0);
     }
   }
@@ -367,7 +394,7 @@
           @include tab-footer-body-font($color: white);
         }
       }
-      &--link{
+      &--link {
         text-decoration: none;
       }
     }
