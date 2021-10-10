@@ -417,7 +417,7 @@ template {
   .header__primary-nav-list {
     align-items: center;
     justify-content: center;
-    width: 13%;
+    width: 14%;
     display: flex;
     height: 6.18rem;
     padding-bottom: 0rem;
@@ -425,12 +425,8 @@ template {
   }
 }
 .header__primary-nav-list--anchor {
-  height: 1rem;
   text-align: center;
-  display: inline-block;
-  vertical-align: middle;
   width: 100%;
-  justify-content: center;
   text-decoration: none;
   font-family: "avenir-regular";
   font-weight: normal;
@@ -471,7 +467,6 @@ template {
 @media screen and (min-width: 767px) {
   .bees-knees {
     height: 26rem;
-    margin-bottom: 1.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -487,6 +482,7 @@ template {
 }
 @media screen and (min-width: 767px) {
   .bees-knees__header {
+    width: 100%;
     padding-top: 3rem;
     padding-bottom: 2.25rem;
     padding-left: 2.25rem;
@@ -513,6 +509,7 @@ template {
     font-size: 3.75rem;
     line-height: 4.25rem;
     color: white;
+    font-family: "avenir-demi";
   }
 }
 
@@ -528,8 +525,6 @@ template {
     padding-bottom: 2.25rem;
     padding-left: 2.25rem;
     padding-right: 2.25rem;
-    padding-bottom: 0;
-    padding-top: 0;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -543,17 +538,18 @@ template {
 .musicians__header--heading {
   font-family: "avenir-bold";
   font-weight: bold;
-  font-size: 1.375rem;
-  line-height: 0.875rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   color: #323232;
 }
 @media screen and (min-width: 767px) {
   .musicians__header--heading {
     font-family: "avenir-bold";
     font-weight: bold;
-    font-size: 2.25rem;
-    line-height: 2.75rem;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
     color: #323232;
+    font-family: "avenir-demi";
     margin: 0;
   }
 }
@@ -767,6 +763,7 @@ template {
   }
 }
 .photo-gallery__header--heading {
+  font-family: "avenir-regular";
   font-family: "avenir-bold";
   font-weight: bold;
   font-size: 1.5rem;
@@ -780,6 +777,7 @@ template {
     font-size: 3.75rem;
     line-height: 4.25rem;
     color: #323232;
+    font-family: "avenir-demi";
   }
 }
 .photo-gallery__img {
@@ -810,11 +808,11 @@ template {
   filter: grayscale(0);
 }
 
-.contact {
+.footer {
   background-color: #323232;
 }
 @media screen and (min-width: 767px) {
-  .contact {
+  .footer {
     padding-top: 3rem;
     padding-bottom: 2.25rem;
     padding-left: 2.25rem;
@@ -823,19 +821,19 @@ template {
   }
 }
 @media screen and (min-width: 1280px) {
-  .contact {
+  .footer {
     padding-left: 8rem;
     padding-right: 8rem;
   }
 }
 @media screen and (min-width: 767px) {
-  .contact__header {
+  .footer__header {
     display: inline-block;
     padding-top: 0;
     padding-bottom: 0;
   }
 }
-.contact__header--heading {
+.footer__header--heading {
   padding-top: 1.5rem;
   padding-bottom: 1rem;
   padding-left: 1rem;
@@ -847,17 +845,18 @@ template {
   color: white;
 }
 @media screen and (min-width: 767px) {
-  .contact__header--heading {
-    font-family: "avenir-demi";
-    font-weight: 600;
-    font-size: 1.5rem;
-    line-height: 2rem;
+  .footer__header--heading {
+    font-family: "avenir-bold";
+    font-weight: bold;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
     color: white;
+    font-family: "avenir-demi";
     margin-top: 0;
     margin-bottom: 0;
   }
 }
-.contact__img {
+.footer__img {
   display: flex;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
@@ -865,18 +864,18 @@ template {
   padding-right: 1rem;
 }
 @media screen and (min-width: 767px) {
-  .contact__img {
+  .footer__img {
     display: inline-block;
     padding-top: 0;
     padding-bottom: 0;
   }
 }
-.contact__img--size {
+.footer__img--size {
   width: 2rem;
   height: 2rem;
   margin-right: 1rem;
 }
-.contact__div {
+.footer__div {
   display: flex;
   flex-direction: column;
   height: 35rem;
@@ -886,7 +885,7 @@ template {
   padding-right: 1rem;
 }
 @media screen and (min-width: 767px) {
-  .contact__div {
+  .footer__div {
     height: 8rem;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -894,28 +893,28 @@ template {
   }
 }
 @media screen and (min-width: 1280px) {
-  .contact__div {
+  .footer__div {
     height: 8rem;
     width: 60%;
   }
 }
-.contact__div-text {
+.footer__div-text {
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
 }
 @media screen and (min-width: 767px) {
-  .contact__div-text {
+  .footer__div-text {
     width: 30%;
     margin: 0;
   }
 }
 @media screen and (min-width: 1280px) {
-  .contact__div-text {
+  .footer__div-text {
     width: 26%;
   }
 }
-.contact__div-text--para {
+.footer__div-text--para {
   margin: 0;
   font-family: "avenir-regular";
   font-weight: normal;
@@ -925,7 +924,7 @@ template {
   line-height: 1.3rem;
 }
 @media screen and (min-width: 767px) {
-  .contact__div-text--para {
+  .footer__div-text--para {
     font-family: "avenir-regular";
     font-weight: normal;
     font-size: 0.8125rem;
@@ -933,13 +932,13 @@ template {
     color: white;
   }
 }
-.contact__div-text--link {
+.footer__div-text--link {
   text-decoration: none;
 }
-.contact-footer {
+.footer-logo {
   background-color: #323232;
 }
-.contact-footer__header {
+.footer-logo__header {
   font-family: "avenir-regular";
   font-weight: bold;
   font-size: 1.5rem;
@@ -954,7 +953,7 @@ template {
   padding-bottom: 0;
 }
 @media screen and (min-width: 767px) {
-  .contact-footer__header {
+  .footer-logo__header {
     position: absolute;
     right: 5.25rem;
     top: 1.3rem;
@@ -965,17 +964,17 @@ template {
   }
 }
 @media screen and (min-width: 1280px) {
-  .contact-footer__header {
+  .footer-logo__header {
     right: 11.25rem;
   }
 }
-.contact-footer__text {
+.footer-logo__text {
   display: flex;
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
 }
-.contact-footer__text--para {
+.footer-logo__text--para {
   width: 100%;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
@@ -990,7 +989,7 @@ template {
   margin: 0;
 }
 @media screen and (min-width: 767px) {
-  .contact-footer__text--para {
+  .footer-logo__text--para {
     font-family: "avenir-regular";
     font-weight: normal;
     font-size: 0.8125rem;
