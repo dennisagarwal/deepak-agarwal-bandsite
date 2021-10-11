@@ -4,7 +4,7 @@
 @use "./styles/partials/mixins" as *;
 
 .header {
-  background-color: #323232;
+  background-color: $primary-color2;
   display: flex;
   flex-direction: column;
   @include tablet {
@@ -44,7 +44,7 @@
       display: flex;
       width: 100%;
       justify-content: space-around;
-      color: white;
+      color: #e1e1e1;
 
       @include tablet {
         align-items: center;
@@ -60,23 +60,26 @@
         text-align: center;
         width: 100%;
         text-decoration: none;
-        @include mob-body-font(white);
+        @include mob-body-font(#e1e1e1);
         padding-bottom: 1rem;
         @include tablet {
           width: auto;
-          padding-top: 2.4rem;
-          padding-bottom: 2.4rem;
+          padding-top: 2.55rem;
+          padding-bottom: 2.55rem;
         }
         @include desktop {
-          padding-top: 2.8rem;
-          padding-bottom: 2.8rem;
+          padding-top: 3.0rem;
+          padding-bottom: 3.0rem;
         }
       }
       :hover {
-        color: pink;
+        font-weight: 700;
+        color: $primary-color3;
       }
       &--current {
-        border-bottom: 0.2rem solid #ffffff;
+        font-weight: 700;
+        color: $primary-color3;
+        border-bottom: 0.2rem solid $primary-color3;
       }
     }
   }
@@ -113,9 +116,9 @@
     }
     &--heading {
       width: 100%;
-      @include mob-page-header-font(white);
+      @include mob-page-header-font($primary-color3);
       @include tablet {
-        @include tab-page-header-font(white);
+        @include tab-page-header-font($primary-color3);
         font-family: "avenir-demi";
       }
     }
@@ -127,8 +130,6 @@
     @include mobile-padding;
     @include tablet {
       @include tablet-padding;
-      // padding-bottom: 0;
-      // padding-top: 0;
     }
     @include desktop {
       padding-left: 8rem;
@@ -137,9 +138,9 @@
       padding-top: 3.25rem;
     }
     &--heading {
-      @include mob-page-header-font(#323232);
+      @include mob-page-header-font($primary-color2);
       @include tablet {
-        @include tab-page-header-font(#323232);
+        @include tab-page-header-font($primary-color2);
         font-family: "avenir-demi";
         margin: 0;
       }
@@ -188,11 +189,11 @@
     &--para1 {
       margin-bottom: 0;
       margin-top: 0;
-      @include mob-body-font(#323232);
+      @include mob-body-font($primary-color2);
       line-height: 1.7rem;
       font-weight: bold;
       @include tablet {
-        @include tab-body-font(#323232);
+        @include tab-body-font($primary-color2);
         font-size: 1.6rem;
         line-height: 1.7;
         font-weight: bold;
@@ -201,11 +202,11 @@
     &--para2 {
       margin-bottom: 0;
       margin-top: 0;
-      @include mob-body-font(#323232);
+      @include mob-body-font($primary-color2);
       line-height: 1.7rem;
       font-weight: bold;
       @include tablet {
-        @include tab-body-font(#323232);
+        @include tab-body-font($primary-color2);
         font-size: 1.3rem;
         line-height: 1.7;
         font-weight: bold;
@@ -230,11 +231,11 @@
       padding-top: 0;
       padding-bottom: 0;
       &--heading {
-        @include mob-sub-header-font(#323232);
+        @include mob-sub-header-font($primary-color1);
         margin-top: 0;
         margin-bottom: 0;
         @include tablet {
-          @include tab-sub-header-font(#323232);
+          @include tab-sub-header-font($primary-color1);
           margin-top: 0;
           margin-bottom: 0;
         }
@@ -254,12 +255,12 @@
       }
 
       &--text {
-        @include mob-body-font(#323232);
+        @include mob-body-font($primary-color2);
         line-height: 1.5;
         margin-top: 0;
         margin-bottom: 0;
         @include tablet {
-          @include tab-body-font(#323232);
+          @include tab-body-font($primary-color2);
         }
       }
     }
@@ -278,9 +279,9 @@
   &__header {
     &--heading {
       font-family: "avenir-regular";
-      @include mob-page-header-font(#323232);
+      @include mob-page-header-font($primary-color2);
       @include tablet {
-        @include tab-page-header-font(#323232);
+        @include tab-page-header-font($primary-color2);
         font-family: "avenir-demi";
       }
     }
@@ -313,7 +314,7 @@
 .footer {
   display: flex;
   flex-direction: column;
-  background-color: #323232;
+  background-color: $primary-color2;
   @include tablet {
 
     @include tablet-padding;
@@ -332,20 +333,19 @@
   &__header {
 
     @include tablet {
-
       padding-top: 0;
       padding-bottom: 0;
     }
     &--heading {
       width: 22.5rem;
       @include mobile-padding;
-      @include mob-page-header-font(white);
+      @include mob-page-header-font($primary-color3);
       padding-bottom: 0;
       @include tablet {
         padding-left: 0;
         padding-right: 0;
         padding-bottom: 0;
-        @include tab-page-header-font(white);
+        @include tab-page-header-font($primary-color3);
         font-family: "avenir-demi";
         margin-top: 0;
         margin-bottom: 0;
@@ -420,10 +420,10 @@
       }
       &--para {
         margin: 0;
-        @include mob-footer-body-font($color: white);
+        @include mob-footer-body-font($primary-color3);
         line-height: 1.3rem;
         @include tablet {
-          @include tab-footer-body-font($color: white);
+          @include tab-footer-body-font($primary-color3);
         }
       }
       &--link {
@@ -432,7 +432,7 @@
     }
   }
   &-logo2__header {
-    background-color: #323232;
+    background-color: $primary-color2;
     @include logo;
     @include mobile-padding;
     padding-bottom: 0;
@@ -446,7 +446,7 @@
     }
   }
   &-logo2__header {
-    background-color: #323232;
+    background-color: $primary-color2;
     @include logo;
     @include mobile-padding;
     padding-bottom: 0;
@@ -462,12 +462,12 @@
     }
     &--para {
       @include mobile-padding;
-      @include mob-footer-body-font(white);
+      @include mob-footer-body-font($primary-color3);
       padding-top: 0;
       margin: 0;
       @include tablet {
         padding: 0;
-        @include tab-footer-body-font($color: white);
+        @include tab-footer-body-font($primary-color3);
       }
     }
   }
