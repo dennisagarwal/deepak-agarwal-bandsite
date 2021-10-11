@@ -809,6 +809,8 @@ template {
 }
 
 .footer {
+  display: flex;
+  flex-direction: column;
   background-color: #323232;
 }
 @media screen and (min-width: 767px) {
@@ -817,7 +819,6 @@ template {
     padding-bottom: 2.25rem;
     padding-left: 2.25rem;
     padding-right: 2.25rem;
-    position: relative;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -827,13 +828,20 @@ template {
   }
 }
 @media screen and (min-width: 767px) {
+  .footer__top {
+    height: 5.75rem;
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 767px) {
   .footer__header {
-    display: inline-block;
     padding-top: 0;
     padding-bottom: 0;
   }
 }
 .footer__header--heading {
+  width: 22.5rem;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
   padding-left: 1rem;
@@ -843,9 +851,13 @@ template {
   font-size: 1.5rem;
   line-height: 2rem;
   color: white;
+  padding-bottom: 0;
 }
 @media screen and (min-width: 767px) {
   .footer__header--heading {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
     font-family: "avenir-bold";
     font-weight: bold;
     font-size: 3.75rem;
@@ -857,7 +869,6 @@ template {
   }
 }
 .footer__img {
-  display: flex;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
   padding-left: 1rem;
@@ -865,15 +876,48 @@ template {
 }
 @media screen and (min-width: 767px) {
   .footer__img {
-    display: inline-block;
-    padding-top: 0;
-    padding-bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
   }
 }
 .footer__img--size {
   width: 2rem;
   height: 2rem;
-  margin-right: 1rem;
+  margin: auto 1rem;
+}
+@media screen and (min-width: 1280px) {
+  .footer__img--size {
+    margin: auto 1rem;
+  }
+}
+.footer-logo1__header {
+  display: none;
+  visibility: none;
+  font-family: "avenir-regular";
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: white;
+  width: 7.5rem;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 767px) {
+  .footer-logo1__header {
+    display: flex;
+    flex-direction: row;
+    font-family: "avenir-regular";
+    padding: 0;
+    width: 11rem;
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer-logo1__header {
+    margin-left: auto;
+    margin-right: 0;
+  }
 }
 .footer__div {
   display: flex;
@@ -886,6 +930,7 @@ template {
 }
 @media screen and (min-width: 767px) {
   .footer__div {
+    padding-left: 0;
     height: 8rem;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -905,7 +950,7 @@ template {
 }
 @media screen and (min-width: 767px) {
   .footer__div-text {
-    width: 30%;
+    width: 29%;
     margin: 0;
   }
 }
@@ -935,10 +980,8 @@ template {
 .footer__div-text--link {
   text-decoration: none;
 }
-.footer-logo {
+.footer-logo2__header {
   background-color: #323232;
-}
-.footer-logo__header {
   font-family: "avenir-regular";
   font-weight: bold;
   font-size: 1.5rem;
@@ -953,29 +996,43 @@ template {
   padding-bottom: 0;
 }
 @media screen and (min-width: 767px) {
-  .footer-logo__header {
-    position: absolute;
-    right: 5.25rem;
-    top: 1.3rem;
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-top: 0;
-    margin-bottom: 0;
+  .footer-logo2__header {
+    padding-left: 0;
+    display: none;
+    visibility: hidden;
   }
 }
 @media screen and (min-width: 1280px) {
-  .footer-logo__header {
+  .footer-logo2__header {
     right: 11.25rem;
   }
 }
-.footer-logo__text {
+.footer-logo2__header {
+  background-color: #323232;
+  font-family: "avenir-regular";
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: white;
+  width: 7.5rem;
+  text-transform: uppercase;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 0;
+}
+@media screen and (min-width: 767px) {
+  .footer-logo2__header {
+    padding-left: 0;
+  }
+}
+.footer-logo2__text {
   display: flex;
   flex-direction: column;
-  align-items: center;
   flex-wrap: wrap;
 }
-.footer-logo__text--para {
-  width: 100%;
+.footer-logo2__text--para {
   padding-top: 1.5rem;
   padding-bottom: 1rem;
   padding-left: 1rem;
@@ -989,7 +1046,8 @@ template {
   margin: 0;
 }
 @media screen and (min-width: 767px) {
-  .footer-logo__text--para {
+  .footer-logo2__text--para {
+    padding: 0;
     font-family: "avenir-regular";
     font-weight: normal;
     font-size: 0.8125rem;

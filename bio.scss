@@ -63,11 +63,11 @@
         @include mob-body-font(white);
         padding-bottom: 1rem;
         @include tablet {
-         width: auto;
+          width: auto;
           padding-top: 2.4rem;
           padding-bottom: 2.4rem;
         }
-        @include desktop{
+        @include desktop {
           padding-top: 2.8rem;
           padding-bottom: 2.8rem;
         }
@@ -116,7 +116,7 @@
       @include mob-page-header-font(white);
       @include tablet {
         @include tab-page-header-font(white);
-        font-family:"avenir-demi";
+        font-family: "avenir-demi";
       }
     }
   }
@@ -140,7 +140,7 @@
       @include mob-page-header-font(#323232);
       @include tablet {
         @include tab-page-header-font(#323232);
-        font-family:"avenir-demi";
+        font-family: "avenir-demi";
         margin: 0;
       }
     }
@@ -277,11 +277,11 @@
   }
   &__header {
     &--heading {
-      font-family:"avenir-regular";
+      font-family: "avenir-regular";
       @include mob-page-header-font(#323232);
       @include tablet {
         @include tab-page-header-font(#323232);
-        font-family:"avenir-demi";
+        font-family: "avenir-demi";
       }
     }
   }
@@ -311,26 +311,40 @@
 }
 
 .footer {
+  display: flex;
+  flex-direction: column;
   background-color: #323232;
   @include tablet {
+
     @include tablet-padding;
-    position: relative;
   }
   @include desktop {
     padding-left: 8rem;
     padding-right: 8rem;
   }
-  &__header {
+  &__top {
     @include tablet {
-      display: inline-block;
+      height: 5.75rem;
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  &__header {
+
+    @include tablet {
+
       padding-top: 0;
       padding-bottom: 0;
     }
     &--heading {
+      width: 22.5rem;
       @include mobile-padding;
       @include mob-page-header-font(white);
+      padding-bottom: 0;
       @include tablet {
-        // @include tablet-padding;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
         @include tab-page-header-font(white);
         font-family: "avenir-demi";
         margin-top: 0;
@@ -339,20 +353,43 @@
     }
   }
   &__img {
-    display: flex;
 
     @include mobile-padding;
     @include tablet {
-      display: inline-block;
-      // @include tablet-padding;
-      padding-top: 0;
-      padding-bottom: 0;
+      display: flex;
+    justify-content: space-around;
+      padding: 0;
+
     }
     &--size {
       width: 2rem;
       height: 2rem;
-      margin-right: 1rem;
+      margin: auto 1rem;
+      @include desktop {
+        margin: auto 1rem;
+      }
     }
+  }
+  &-logo1__header {
+    display: none;
+    visibility: none;
+    @include logo;
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      font-family: "avenir-regular";
+      padding: 0;
+      width: 11rem;
+      margin-left: auto;
+      margin-right: 0;
+
+    }
+    @include desktop {
+      margin-left: auto;
+      margin-right: 0;
+    }
+
   }
   &__div {
     display: flex;
@@ -360,8 +397,8 @@
     height: 35rem;
     @include mobile-padding;
     @include tablet {
+      padding-left: 0;
       height: 8rem;
-      // width: 100%;
       flex-wrap: wrap;
       justify-content: space-between;
       align-content: space-between;
@@ -375,7 +412,7 @@
       flex-direction: column;
       margin-bottom: 2rem;
       @include tablet {
-        width: 30%;
+        width: 29%;
         margin: 0;
       }
       @include desktop {
@@ -394,42 +431,43 @@
       }
     }
   }
-
-  &-logo {
+  &-logo2__header {
     background-color: #323232;
-    &__header {
-      @include logo;
-      @include mobile-padding;
-      padding-bottom: 0;
-      @include tablet {
-        // @include tablet-padding;
-        position: absolute;
-        right: 5.25rem;
-        top: 1.3rem;
-        padding-top: 0;
-        padding-bottom: 0;
-        margin-top: 0;
-        margin-bottom: 0;
-      }
-      @include desktop {
-        right: 11.25rem;
-      }
+    @include logo;
+    @include mobile-padding;
+    padding-bottom: 0;
+    @include tablet {
+      padding-left: 0;
+      display: none;
+      visibility: hidden;
     }
-    &__text {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      flex-wrap: wrap;
-      &--para {
-        width: 100%;
-        @include mobile-padding;
-        @include mob-footer-body-font(white);
-        padding-top: 0;
-        margin: 0;
-        @include tablet {
-          // @include tablet-padding;
-          @include tab-footer-body-font($color: white);
-        }
+    @include desktop {
+      right: 11.25rem;
+    }
+  }
+  &-logo2__header {
+    background-color: #323232;
+    @include logo;
+    @include mobile-padding;
+    padding-bottom: 0;
+    @include tablet {
+      padding-left: 0;
+    }
+  }
+  &-logo2__text {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    @include tablet {
+    }
+    &--para {
+      @include mobile-padding;
+      @include mob-footer-body-font(white);
+      padding-top: 0;
+      margin: 0;
+      @include tablet {
+        padding: 0;
+        @include tab-footer-body-font($color: white);
       }
     }
   }
