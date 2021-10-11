@@ -883,6 +883,8 @@ template {
 .footer-logo1__header {
   display: none;
   visibility: none;
+}
+.footer-logo1__header--heading {
   font-family: "avenir-regular";
   font-weight: bold;
   font-size: 1.5rem;
@@ -890,6 +892,8 @@ template {
   color: white;
   width: 7.5rem;
   text-transform: uppercase;
+  text-decoration: none;
+  font-weight: normal;
 }
 @media screen and (min-width: 767px) {
   .footer-logo1__header {
@@ -897,15 +901,12 @@ template {
     flex-direction: row;
     font-family: "avenir-regular";
     padding: 0;
-    width: 11rem;
-    margin-left: auto;
-    margin-right: 0;
+    margin: auto 0 auto auto;
   }
 }
 @media screen and (min-width: 1280px) {
   .footer-logo1__header {
-    margin-left: auto;
-    margin-right: 0;
+    margin: auto 0 auto auto;
   }
 }
 .footer__div {
@@ -971,6 +972,13 @@ template {
 }
 .footer-logo2__header {
   background-color: #323232;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 0;
+}
+.footer-logo2__header--heading {
   font-family: "avenir-regular";
   font-weight: bold;
   font-size: 1.5rem;
@@ -978,37 +986,14 @@ template {
   color: white;
   width: 7.5rem;
   text-transform: uppercase;
-  padding-top: 1.5rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 0;
+  text-decoration: none;
+  font-weight: normal;
 }
 @media screen and (min-width: 767px) {
   .footer-logo2__header {
     padding-left: 0;
     display: none;
     visibility: hidden;
-  }
-}
-.footer-logo2__header {
-  background-color: #323232;
-  font-family: "avenir-regular";
-  font-weight: bold;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  color: white;
-  width: 7.5rem;
-  text-transform: uppercase;
-  padding-top: 1.5rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 0;
-}
-@media screen and (min-width: 767px) {
-  .footer-logo2__header {
-    padding-left: 0;
   }
 }
 .footer-logo2__text {
@@ -1027,7 +1012,6 @@ template {
   color: #FFFFFF;
   font-weight: 700;
   padding-top: 0;
-  margin: 0;
 }
 @media screen and (min-width: 767px) {
   .footer-logo2__text--para {
