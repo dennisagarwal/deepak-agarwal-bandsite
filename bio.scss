@@ -5,9 +5,9 @@
 
 .header {
   background-color: $primary-color2;
-  @include display(flex,column);
+  @include display(flex, column);
   @include tablet {
-    @include display(flex,row);
+    @include display(flex, row);
     align-items: center;
   }
   @include desktop {
@@ -20,35 +20,33 @@
       text-decoration: none;
       @include logo;
       @include mobile-padding;
+      font-weight: normal;
       @include tablet {
         @include tablet-padding;
         @include desktop {
-          padding-left: 8rem;
-          padding-bottom: 0;
-          padding-top: 0;
+          padding: 3rem 0 0 8rem;
         }
       }
     }
   }
 
   &__primary-nav {
-    @include display(flex,row);
+    @include display(flex, row);
     width: 100%;
     padding-left: 0;
     margin-bottom: 0;
     margin-top: 0;
     &-list {
       list-style: none;
-      @include display(flex,row);
+      @include display(flex, row);
       width: 100%;
       justify-content: space-around;
       color: $primary-color4;
-
       @include tablet {
         align-items: center;
         justify-content: center;
         width: 14%;
-        @include display(flex,row);
+        @include display(flex, row);
         height: 6.18rem;
         padding-bottom: 0rem;
         border-bottom: 0rem;
@@ -62,12 +60,10 @@
         padding-bottom: 1rem;
         @include tablet {
           width: auto;
-          padding-top: 2.55rem;
-          padding-bottom: 2.55rem;
+          padding: 2.55rem 0 2.55rem 0;
         }
         @include desktop {
-          padding-top: 3.0rem;
-          padding-bottom: 3.0rem;
+          padding: 3rem 0 3rem 0;
         }
       }
       :hover {
@@ -85,7 +81,7 @@
 
 .bees-knees {
   width: 100%;
-  height: 18rem;
+  height:19rem;
   background: linear-gradient(
       rgba($primary-color1, 0.5),
       rgba($primary-color1, 0.5)
@@ -93,8 +89,7 @@
     url("./assets/images/hero-bio.jpg");
   background-position: center;
   background-size: cover;
-  @include display(flex,row);
-  // display: flex;
+  @include display(flex, row);
   align-items: center;
 
   @include tablet {
@@ -117,7 +112,6 @@
       @include mob-page-header-font($primary-color3);
       @include tablet {
         @include tab-page-header-font($primary-color3);
-        font-family: "avenir-demi";
       }
     }
   }
@@ -130,13 +124,11 @@
       @include tablet-padding;
     }
     @include desktop {
-      padding-left: 8rem;
-      padding-right: 8rem;
-      padding-bottom: 0;
-      padding-top: 3.25rem;
+      padding: 3.25rem 8rem 0 8rem;
     }
     &--heading {
       @include mob-page-header-font($primary-color2);
+      font-weight: normal;
       @include tablet {
         @include tab-page-header-font($primary-color2);
         font-family: "avenir-demi";
@@ -146,18 +138,14 @@
   }
   &__img {
     @include mobile-padding;
-    padding-bottom: 0;
-    padding-top: 0;
+    padding: 0 1rem 0 1rem;
+
     @include tablet {
       @include tablet-padding;
-      padding-left: 4.25rem;
-      padding-right: 4.25rem;
-      padding-top: 1rem;
+      padding: 1rem 4.25rem 0 4.25rem;
     }
     @include desktop {
-      padding-left: 13rem;
-      padding-right: 13rem;
-      padding-top: 3.25rem;
+      padding: 3.25rem 13rem 0 13rem;
     }
     &--size {
       width: 100%;
@@ -173,15 +161,10 @@
     @include mobile-padding;
     @include tablet {
       @include tablet-padding;
-      padding-left: 4.25rem;
-      padding-right: 4.25rem;
-      padding-top: 0;
-      padding-bottom: 0;
+      padding: 1.5rem 4.25rem 1rem 4.25rem;
     }
     @include desktop {
-      padding-left: 13rem;
-      padding-right: 24rem;
-      padding-bottom: 3rem;
+      padding: 1.5rem 24rem 3rem 13rem;
     }
 
     &--para1 {
@@ -189,12 +172,12 @@
       margin-top: 0;
       @include mob-body-font($primary-color2);
       line-height: 1.7rem;
-      font-weight: bold;
+      font-weight: 700;
       @include tablet {
         @include tab-body-font($primary-color2);
         font-size: 1.6rem;
-        line-height: 1.7;
-        font-weight: bold;
+        line-height: 3rem;
+        font-weight: 700;
       }
     }
     &--para2 {
@@ -213,21 +196,16 @@
   }
   &__desc {
     @include tablet {
-      padding-left: 4.25rem;
-      padding-right: 4.25rem;
-      padding-top: 2rem;
-      padding-bottom: 0;
+      padding: 2rem 4.25rem 0 4.25rem;
     }
     @include desktop {
-      padding-left: 13rem;
-      padding-right: 13rem;
-      padding-top: 0;
-      padding-bottom: 0;
+      padding: 0 13rem;
     }
     &-header {
       @include mobile-padding;
-      padding-top: 0;
-      padding-bottom: 0;
+      @include tablet {
+        padding: 0;
+      }
       &--heading {
         @include mob-sub-header-font($primary-color1);
         margin-top: 0;
@@ -241,43 +219,42 @@
     }
 
     &-para {
-      @include display(flex,column);
-      // display: flex;
-      // flex-direction: column;
+      @include display(flex, column);
       align-items: center;
       @include mobile-padding;
-
       @include tablet {
-        @include display(flex,row);
+        @include display(flex, row);
+        padding: 3rem 0 2.25rem 0;
         align-items: center;
       }
 
       &--text {
         @include mob-body-font($primary-color2);
-        line-height: 1.5;
+        line-height: 1.5rem;
         margin-top: 0;
         margin-bottom: 0;
+        padding-bottom: 1rem;
         @include tablet {
           @include tab-body-font($primary-color2);
+          padding-right: 1rem;
         }
       }
     }
   }
 }
 .photo-gallery {
-  background-color:$primary-color4;
+  background-color:$primary-color5;
   @include mobile-padding;
   @include tablet {
     @include tablet-padding;
   }
   @include desktop {
-    padding-left: 8rem;
-    padding-right: 8rem;
+    padding: 3rem 8rem 2.25rem 8rem;
   }
   &__header {
     &--heading {
-      font-family: "avenir-regular";
       @include mob-page-header-font($primary-color2);
+      font-family: "avenir-demi";
       @include tablet {
         @include tab-page-header-font($primary-color2);
         font-family: "avenir-demi";
@@ -285,12 +262,11 @@
     }
   }
   &__img {
-    @include display(flex,column);
+    @include display(flex, column);
     align-items: center;
     flex-wrap: wrap;
     @include tablet {
-      display: flex;
-      flex-direction: row;
+      @include display(flex, row);
       justify-content: space-between;
     }
     &--size {
@@ -309,10 +285,9 @@
 }
 
 .footer {
-  @include display(flex,column);
+  @include display(flex, column);
   background-color: $primary-color2;
   @include tablet {
-
     @include tablet-padding;
   }
   @include desktop {
@@ -322,12 +297,10 @@
   &__top {
     @include tablet {
       height: 5.75rem;
-      display: flex;
-      flex-direction: row;
+      @include display(flex, row);
     }
   }
   &__header {
-
     @include tablet {
       padding-top: 0;
       padding-bottom: 0;
@@ -338,9 +311,7 @@
       @include mob-page-header-font($primary-color3);
       padding-bottom: 0;
       @include tablet {
-        padding-left: 0;
-        padding-right: 0;
-        padding-bottom: 0;
+        padding: 1.5rem 0 0 0;
         @include tab-page-header-font($primary-color3);
         font-family: "avenir-demi";
         margin-top: 0;
@@ -349,19 +320,17 @@
     }
   }
   &__img {
-
     @include mobile-padding;
     @include tablet {
-      @include display(flex,row);
-    justify-content: space-around;
+      @include display(flex, row);
+      justify-content: space-around;
       padding: 0;
-
     }
     &--size {
       width: 2rem;
       height: 2rem;
-      margin: auto 1rem;
-      @include desktop {
+      margin: auto 1rem 0 auto;
+      @include tablet {
         margin: auto 1rem;
       }
     }
@@ -372,22 +341,20 @@
     @include logo;
 
     @include tablet {
-      @include display(flex,row);
+      @include display(flex, row);
       font-family: "avenir-regular";
       padding: 0;
       width: 11rem;
       margin-left: auto;
       margin-right: 0;
-
     }
     @include desktop {
       margin-left: auto;
       margin-right: 0;
     }
-
   }
   &__div {
-    @include display(flex,column);
+    @include display(flex, column);
     height: 35rem;
     @include mobile-padding;
     @include tablet {
@@ -398,11 +365,10 @@
       align-content: space-between;
     }
     @include desktop {
-      height: 8rem;
       width: 60%;
     }
     &-text {
-      @include display(flex,column);
+      @include display(flex, column);
       margin-bottom: 2rem;
       @include tablet {
         width: 29%;
@@ -414,6 +380,7 @@
       &--para {
         margin: 0;
         @include mob-footer-body-font($primary-color3);
+        font-weight: 700;
         line-height: 1.3rem;
         @include tablet {
           @include tab-footer-body-font($primary-color3);
@@ -434,9 +401,6 @@
       display: none;
       visibility: hidden;
     }
-    @include desktop {
-      right: 11.25rem;
-    }
   }
   &-logo2__header {
     background-color: $primary-color2;
@@ -448,13 +412,11 @@
     }
   }
   &-logo2__text {
-    @include display(flex,column);
-    flex-wrap: wrap;
-    @include tablet {
-    }
+    @include display(flex, column);
     &--para {
       @include mobile-padding;
       @include mob-footer-body-font($primary-color3);
+      font-weight: 700;
       padding-top: 0;
       margin: 0;
       @include tablet {

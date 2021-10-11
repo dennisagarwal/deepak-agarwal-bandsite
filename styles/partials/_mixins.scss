@@ -1,5 +1,4 @@
 @use "./variables" as *;
-// @use "./typograpgy" as *;
 
 @mixin tablet {
   @media screen and (min-width: $tablet-breakpoint) {
@@ -21,7 +20,6 @@
   font-size: 1.5rem;
   line-height: 2rem;
   color: white;
-  // background-color: #323232;
   width: 7.5rem;
   text-transform: uppercase;
 }

@@ -383,6 +383,7 @@ template {
   padding-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  font-weight: normal;
 }
 @media screen and (min-width: 767px) {
   .header__nav--logo {
@@ -394,9 +395,7 @@ template {
 }
 @media screen and (min-width: 767px) and (min-width: 1280px) {
   .header__nav--logo {
-    padding-left: 8rem;
-    padding-bottom: 0;
-    padding-top: 0;
+    padding: 3rem 0 0 8rem;
   }
 }
 .header__primary-nav {
@@ -441,14 +440,12 @@ template {
 @media screen and (min-width: 767px) {
   .header__primary-nav-list--anchor {
     width: auto;
-    padding-top: 2.55rem;
-    padding-bottom: 2.55rem;
+    padding: 2.55rem 0 2.55rem 0;
   }
 }
 @media screen and (min-width: 1280px) {
   .header__primary-nav-list--anchor {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding: 3rem 0 3rem 0;
   }
 }
 .header__primary-nav-list :hover {
@@ -463,7 +460,7 @@ template {
 
 .bees-knees {
   width: 100%;
-  height: 18rem;
+  height: 19rem;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/images/hero-bio.jpg");
   background-position: center;
   background-size: cover;
@@ -516,7 +513,6 @@ template {
     font-size: 3.75rem;
     line-height: 4.25rem;
     color: #FFFFFF;
-    font-family: "avenir-demi";
   }
 }
 
@@ -536,10 +532,7 @@ template {
 }
 @media screen and (min-width: 1280px) {
   .musicians__header {
-    padding-left: 8rem;
-    padding-right: 8rem;
-    padding-bottom: 0;
-    padding-top: 3.25rem;
+    padding: 3.25rem 8rem 0 8rem;
   }
 }
 .musicians__header--heading {
@@ -548,6 +541,7 @@ template {
   font-size: 1.5rem;
   line-height: 2rem;
   color: #323232;
+  font-weight: normal;
 }
 @media screen and (min-width: 767px) {
   .musicians__header--heading {
@@ -565,8 +559,7 @@ template {
   padding-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-bottom: 0;
-  padding-top: 0;
+  padding: 0 1rem 0 1rem;
 }
 @media screen and (min-width: 767px) {
   .musicians__img {
@@ -574,16 +567,12 @@ template {
     padding-bottom: 2.25rem;
     padding-left: 2.25rem;
     padding-right: 2.25rem;
-    padding-left: 4.25rem;
-    padding-right: 4.25rem;
-    padding-top: 1rem;
+    padding: 1rem 4.25rem 0 4.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .musicians__img {
-    padding-left: 13rem;
-    padding-right: 13rem;
-    padding-top: 3.25rem;
+    padding: 3.25rem 13rem 0 13rem;
   }
 }
 .musicians__img--size {
@@ -609,17 +598,12 @@ template {
     padding-bottom: 2.25rem;
     padding-left: 2.25rem;
     padding-right: 2.25rem;
-    padding-left: 4.25rem;
-    padding-right: 4.25rem;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 1.5rem 4.25rem 1rem 4.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .musicians__text {
-    padding-left: 13rem;
-    padding-right: 24rem;
-    padding-bottom: 3rem;
+    padding: 1.5rem 24rem 3rem 13rem;
   }
 }
 .musicians__text--para1 {
@@ -631,7 +615,7 @@ template {
   line-height: 0.875rem;
   color: #323232;
   line-height: 1.7rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 @media screen and (min-width: 767px) {
   .musicians__text--para1 {
@@ -641,8 +625,8 @@ template {
     line-height: 1.375rem;
     color: #323232;
     font-size: 1.6rem;
-    line-height: 1.7;
-    font-weight: bold;
+    line-height: 3rem;
+    font-weight: 700;
   }
 }
 .musicians__text--para2 {
@@ -670,18 +654,12 @@ template {
 }
 @media screen and (min-width: 767px) {
   .musicians__desc {
-    padding-left: 4.25rem;
-    padding-right: 4.25rem;
-    padding-top: 2rem;
-    padding-bottom: 0;
+    padding: 2rem 4.25rem 0 4.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .musicians__desc {
-    padding-left: 13rem;
-    padding-right: 13rem;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0 13rem;
   }
 }
 .musicians__desc-header {
@@ -689,8 +667,11 @@ template {
   padding-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: 0;
-  padding-bottom: 0;
+}
+@media screen and (min-width: 767px) {
+  .musicians__desc-header {
+    padding: 0;
+  }
 }
 .musicians__desc-header--heading {
   font-family: "avenir-demi";
@@ -725,6 +706,7 @@ template {
   .musicians__desc-para {
     display: flex;
     flex-direction: row;
+    padding: 3rem 0 2.25rem 0;
     align-items: center;
   }
 }
@@ -734,9 +716,10 @@ template {
   font-size: 1.125rem;
   line-height: 0.875rem;
   color: #323232;
-  line-height: 1.5;
+  line-height: 1.5rem;
   margin-top: 0;
   margin-bottom: 0;
+  padding-bottom: 1rem;
 }
 @media screen and (min-width: 767px) {
   .musicians__desc-para--text {
@@ -745,11 +728,12 @@ template {
     font: size 0.875rem;
     line-height: 1.375rem;
     color: #323232;
+    padding-right: 1rem;
   }
 }
 
 .photo-gallery {
-  background-color: #e1e1e1;
+  background-color: #FAFAFA;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
   padding-left: 1rem;
@@ -765,17 +749,16 @@ template {
 }
 @media screen and (min-width: 1280px) {
   .photo-gallery {
-    padding-left: 8rem;
-    padding-right: 8rem;
+    padding: 3rem 8rem 2.25rem 8rem;
   }
 }
 .photo-gallery__header--heading {
-  font-family: "avenir-regular";
   font-family: "avenir-bold";
   font-weight: bold;
   font-size: 1.5rem;
   line-height: 2rem;
   color: #323232;
+  font-family: "avenir-demi";
 }
 @media screen and (min-width: 767px) {
   .photo-gallery__header--heading {
@@ -862,9 +845,7 @@ template {
 }
 @media screen and (min-width: 767px) {
   .footer__header--heading {
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 0;
+    padding: 1.5rem 0 0 0;
     font-family: "avenir-bold";
     font-weight: bold;
     font-size: 3.75rem;
@@ -892,9 +873,9 @@ template {
 .footer__img--size {
   width: 2rem;
   height: 2rem;
-  margin: auto 1rem;
+  margin: auto 1rem 0 auto;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 767px) {
   .footer__img--size {
     margin: auto 1rem;
   }
@@ -947,7 +928,6 @@ template {
 }
 @media screen and (min-width: 1280px) {
   .footer__div {
-    height: 8rem;
     width: 60%;
   }
 }
@@ -974,6 +954,7 @@ template {
   font-size: 0.8125rem;
   line-height: 1.125rem;
   color: #FFFFFF;
+  font-weight: 700;
   line-height: 1.3rem;
 }
 @media screen and (min-width: 767px) {
@@ -1010,11 +991,6 @@ template {
     visibility: hidden;
   }
 }
-@media screen and (min-width: 1280px) {
-  .footer-logo2__header {
-    right: 11.25rem;
-  }
-}
 .footer-logo2__header {
   background-color: #323232;
   font-family: "avenir-regular";
@@ -1038,7 +1014,6 @@ template {
 .footer-logo2__text {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
 }
 .footer-logo2__text--para {
   padding-top: 1.5rem;
@@ -1050,6 +1025,7 @@ template {
   font-size: 0.8125rem;
   line-height: 1.125rem;
   color: #FFFFFF;
+  font-weight: 700;
   padding-top: 0;
   margin: 0;
 }
