@@ -1,0 +1,155 @@
+@use "./partials/normalize" as *;
+@use "./partials/variables" as *;
+@use "./partials/typography" as *;
+@use "./partials/mixins" as *;
+
+// body{
+//   font-family: "avenir-bold";
+// }
+.header {
+  background-color: $primary-color2;
+  @include display(flex, column);
+  @include tablet {
+    @include display(flex, row);
+    align-items: center;
+  }
+  @include desktop {
+    height: 15vh;
+  }
+  &__nav {
+    margin: 1rem auto;
+
+    &--logo {
+      text-decoration: none;
+      @include logo;
+      @include mobile-padding;
+      font-weight: normal;
+      @include tablet {
+        @include tablet-padding;
+        @include desktop {
+          padding: 3rem 0 0 8rem;
+        }
+      }
+    }
+  }
+
+  &__primary-nav {
+    @include display(flex, row);
+    width: 100%;
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    &-list {
+      list-style: none;
+      @include display(flex, row);
+      width: 100%;
+      justify-content: space-around;
+      color: $primary-color4;
+      @include tablet {
+        align-items: center;
+        justify-content: center;
+        width: 14%;
+        @include display(flex, row);
+        height: 6.18rem;
+        padding-bottom: 0rem;
+        border-bottom: 0rem;
+      }
+
+      &--anchor {
+        text-align: center;
+        width: 100%;
+        text-decoration: none;
+        @include mob-body-font($primary-color4);
+        padding-bottom: 1rem;
+        @include tablet {
+          @include tab-body-font($primary-color4);
+          width: auto;
+          padding: 2.55rem 0 2.55rem 0;
+        }
+        @include desktop {
+          padding: 3rem 0 3rem 0;
+        }
+      }
+      :hover {
+        font-weight: 700;
+        color: $primary-color3;
+      }
+      &--current {
+        font-weight: 700;
+        color: $primary-color3;
+        border-bottom: 0.2rem solid $primary-color3;
+      }
+    }
+  }
+}
+
+.beautiful-beast {
+  width: 100%;
+  height: 26rem;
+  background: linear-gradient(
+      rgba($primary-color1, 0.5),
+      rgba($primary-color1, 0.5)
+    ),
+    url("../assets/images/hero-shows.jpg");
+  background-position: center;
+  background-size: cover;
+  @include display(flex, row);
+  align-items: flex-start;
+
+  @include tablet {
+    height: 26rem;
+  }
+  @include desktop {
+    height: 85vh;
+  }
+  &__header {
+    height: 50%;
+    @include display(flex,column);
+    @include mobile-padding;
+    @include tablet {
+      width: 100%;
+      @include tablet-padding;
+    }
+    @include desktop {
+      padding-left: 8rem;
+    }
+    &-1 {
+
+      &--heading-line-1 {
+        width: 100%;
+        @include mob-page-header-font($primary-color3);
+        font-size: 1.5rem;
+        @include tablet {
+          @include tab-page-header-font($primary-color3);
+        }
+      }
+    }
+    &-2 {
+
+      &--heading-line-2 {
+        width: 100%;
+        @include mob-page-header-font($primary-color3);
+        font-size: 2.5rem;
+        @include tablet {
+          @include tab-page-header-font($primary-color3);
+        }
+      }
+    }
+  }
+}
+
+
+.concert-detail{
+  background-color: yellow;
+  @include mob-body-font;
+  height: 100vw;
+  &__date{
+    color: black;
+  }
+  &__venue{
+    color: black;
+  }
+  &__location{
+    color: black;
+}
+}
