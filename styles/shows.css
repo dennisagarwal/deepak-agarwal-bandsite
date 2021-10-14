@@ -465,7 +465,7 @@ template {
 
 .beautiful-beast {
   width: 100%;
-  height: 26rem;
+  height: 30rem;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/hero-shows.jpg");
   background-position: center;
   background-size: cover;
@@ -543,21 +543,107 @@ template {
   }
 }
 
+.concert {
+  display: flex;
+  flex-direction: column;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+.concert-heading__text {
+  font-family: "avenir-bold";
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #000000;
+}
+.concert__table {
+  display: none;
+}
+@media screen and (min-width: 767px) {
+  .concert__table {
+    display: flex;
+    flex-direction: row;
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+  .concert__table-list {
+    padding-right: 15rem;
+  }
+}
 .concert-detail {
-  background-color: yellow;
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 2rem;
+}
+@media screen and (min-width: 767px) {
+  .concert-detail {
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+  }
+}
+.concert-detail__text {
   font-family: "avenir-regular";
   font-weight: normal;
   font-size: 1.125rem;
   line-height: 0.875rem;
-  color: white;
-  height: 100vw;
+  color: #AFAFAF;
+}
+@media screen and (min-width: 767px) {
+  .concert-detail__text {
+    display: none;
+  }
 }
 .concert-detail__date {
-  color: black;
+  font-family: "avenir-regular";
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 0.875rem;
+  color: #323232;
 }
 .concert-detail__venue {
-  color: black;
+  font-family: "avenir-regular";
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 0.875rem;
+  color: #000000;
 }
 .concert-detail__location {
-  color: black;
+  font-family: "avenir-regular";
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 0.875rem;
+  color: #000000;
+}
+.concert-detail__button {
+  width: 100%;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #323232;
+  border: none;
+  border-radius: 0.3125rem;
+  font-family: "avenir-regular";
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 0.875rem;
+  color: #FFFFFF;
+  font-family: "avenir-demi";
+}
+@media screen and (min-width: 767px) {
+  .concert-detail__button {
+    font-family: "avenir-regular";
+    font-weight: normal;
+    font: size 0.875rem;
+    line-height: 1.375rem;
+    color: #FFFFFF;
+    width: 20%;
+  }
 }/*# sourceMappingURL=shows.css.map */
