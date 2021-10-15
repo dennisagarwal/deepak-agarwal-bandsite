@@ -286,25 +286,57 @@
 
 .conversation {
   @include display(flex, column);
-&__img{
-  width:20%;
-}
-  &__form {
-    width: 80%;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    @include display(flex, column);
+  &__bottom{
+    @include display(flex,row);
   }
+  &__heading{
+    @include mobile-padding;
+    &--text{
+      @include mob-page-header-font($primary-color2);
+    }
+  }
+  &__left {
+    @include mobile-padding;
+    width: 20%;
+    &-img{
+&--mohan{
+  width:8rem;
+  height:8rem;
+  border-radius: 50%;
+}
+    }
+  }
+  &__right {
+    width: 80%;
+    // @include mobile-padding;
+  }
+    &__form {
+      width: 80%;
+      @include mobile-padding;
+      padding-top: 0;
+      @include display(flex, column);
+      &--button{
+        @include mobile-padding;
+        background-color: $primary-color2;
+        @include mob-body-font($primary-color3);
+        margin-top: 2rem;
+        border: none;
+        border-radius: 1rem;
+      }
+    }
+
 }
 
 #converstion {
   &_name {
     @include mob-body-font($primary-color2);
     @include mobile-padding;
+    padding-left: 0;
   }
   &_comment {
     @include mob-body-font($primary-color2);
     @include mobile-padding;
+    padding-left: 0;
   }
 }
 

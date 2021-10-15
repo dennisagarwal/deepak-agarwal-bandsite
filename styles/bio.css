@@ -802,15 +802,62 @@ template {
   display: flex;
   flex-direction: column;
 }
-.conversation__img {
-  widht: 20%;
+.conversation__bottom {
+  display: flex;
+  flex-direction: row;
+}
+.conversation__heading {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.conversation__heading--text {
+  font-family: "avenir-bold";
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #323232;
+}
+.conversation__left {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 20%;
+}
+.conversation__left-img--mohan {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+}
+.conversation__right {
+  width: 80%;
 }
 .conversation__form {
   width: 80%;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  padding-top: 0;
   display: flex;
   flex-direction: column;
+}
+.conversation__form--button {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #323232;
+  font-family: "avenir-regular";
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 0.875rem;
+  color: #FFFFFF;
+  margin-top: 2rem;
+  border: none;
+  border-radius: 1rem;
 }
 
 #converstion_name {
@@ -823,6 +870,7 @@ template {
   padding-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  padding-left: 0;
 }
 #converstion_comment {
   font-family: "avenir-regular";
@@ -834,6 +882,7 @@ template {
   padding-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  padding-left: 0;
 }
 
 .footer {
