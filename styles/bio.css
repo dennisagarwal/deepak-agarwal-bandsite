@@ -798,6 +798,44 @@ template {
   filter: grayscale(0);
 }
 
+.conversation {
+  display: flex;
+  flex-direction: column;
+}
+.conversation__img {
+  widht: 20%;
+}
+.conversation__form {
+  width: 80%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#converstion_name {
+  font-family: "avenir-regular";
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 0.875rem;
+  color: #323232;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+#converstion_comment {
+  font-family: "avenir-regular";
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 0.875rem;
+  color: #323232;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
