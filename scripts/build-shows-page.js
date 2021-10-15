@@ -33,7 +33,7 @@ let shows = [
   },
 ];
 
-let concert = document.querySelector(".concert");
+let concert = document.querySelector(".concert__show");
 let paraText = document.createElement("p");
 
 for (i = 0; i < shows.length; i++) {

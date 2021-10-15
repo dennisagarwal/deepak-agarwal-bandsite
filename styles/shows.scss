@@ -137,65 +137,87 @@
 }
 
 .concert {
+
   @include display(flex, column);
   // @include mobile-padding;
-padding-right: 1rem;
-padding-left: 1rem;
-
+  padding-right: 1rem;
+  padding-left: 1rem;
+  @include desktop{
+  @include display(flex, row);
+}
+&__left{
+  @include desktop {
+    width:30%
+  }
+}
   &-heading {
+
     &__text {
       @include mob-page-header-font($primary-color1);
     }
   }
-  &__table{
+
+  &__right{
+    @include desktop {
+      width:70%
+    }
+  }
+  &__table {
     display: none;
-    @include tablet{
-      @include display(flex,row);
+    @include tablet {
+      @include display(flex, row);
       @include tablet-padding;
-      // justify-content: space-between;
-&-list{
-  padding-right: 15rem;
-}
+      justify-content: space-between;
+      @include desktop {
+      }
+      &-list {
+        width: 20%;
+      }
+      //hidden element for proper spacing in column heading
+      &-hidden {
+        visibility: hidden;
+      }
     }
   }
 
-  &-detail {
-    border-bottom:1px solid $primary-color4 ;
-    padding-bottom: 2rem;
-    @include tablet{
-      @include tablet-padding;
-      @include display(flex,row);
-      justify-content: space-between;
-      align-content: center;
-    }
-    &__text {
-      @include mob-body-font($primary-color6);
-      @include tablet{
-        display: none
+    &-detail {
+      border-bottom: 1px solid $primary-color4;
+      padding-bottom: 2rem;
+      @include tablet {
+        @include tablet-padding;
+        @include display(flex, row);
+        justify-content: space-between;
+        align-content: center;
+
       }
-    }
-    &__date {
-      @include mob-body-font($primary-color2);
-    }
-    &__venue {
-      @include mob-body-font($primary-color1);
-    }
-    &__location {
-      @include mob-body-font($primary-color1);
-    }
-    &__button{
-      width: 100%;
-      @include mobile-padding;
-      background-color: $primary-color2;
-      border: none;
-      border-radius: .3125rem;
-      @include mob-body-font($primary-color3);
-      font-family: "avenir-demi";
-      @include tablet{
-        @include tab-body-font($primary-color3);
-        width: 20%;
+      &__text {
+        @include mob-body-font($primary-color6);
+        @include tablet {
+          display: none;
+        }
+      }
+      &__date {
+        @include mob-body-font($primary-color2);
+      }
+      &__venue {
+        @include mob-body-font($primary-color1);
+      }
+      &__location {
+        @include mob-body-font($primary-color1);
+      }
+      &__button {
+        width: 100%;
+        @include mobile-padding;
+        background-color: $primary-color2;
+        border: none;
+        border-radius: 0.3125rem;
+        @include mob-body-font($primary-color3);
+        font-family: "avenir-demi";
+        @include tablet {
+          @include tab-body-font($primary-color3);
+          width: 20%;
+        }
       }
 
-    }
   }
 }
