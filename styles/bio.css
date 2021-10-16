@@ -831,9 +831,6 @@ template {
   height: 8rem;
   border-radius: 50%;
 }
-.conversation__right {
-  width: 80%;
-}
 .conversation__form {
   width: 80%;
   padding-top: 1.5rem;
@@ -859,10 +856,20 @@ template {
   border: none;
   border-radius: 1rem;
 }
+.conversation__user {
+  display: flex;
+  flex-direction: column;
+}
 .conversation__user-right {
+  display: flex;
+  flex-direction: row;
   list-style: none;
 }
-.conversation__user-image-display {
+.conversation__user-right-image-display {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   width: 8rem;
   height: 8rem;
   border-radius: 50%;

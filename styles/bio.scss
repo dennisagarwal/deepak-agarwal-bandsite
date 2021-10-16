@@ -286,55 +286,66 @@
 
 .conversation {
   @include display(flex, column);
-  &__bottom{
-    @include display(flex,row);
+  &__bottom {
+    @include display(flex, row);
   }
-  &__heading{
+  &__heading {
     @include mobile-padding;
-    &--text{
+    &--text {
       @include mob-page-header-font($primary-color2);
     }
   }
   &__left {
     @include mobile-padding;
     width: 20%;
-    &-img{
-&--mohan{
-  width:8rem;
-  height:8rem;
-  border-radius: 50%;
-}
-    }
-  }
-  &__right {
-    width: 80%;
-    // @include mobile-padding;
-  }
-    &__form {
-      width: 80%;
-      @include mobile-padding;
-      padding-top: 0;
-      @include display(flex, column);
-      &--button{
-        @include mobile-padding;
-        background-color: $primary-color2;
-        @include mob-body-font($primary-color3);
-        margin-top: 2rem;
-        border: none;
-        border-radius: 1rem;
-      }
-    }
-    &__user{
-      &-right{
-        list-style: none;
-      }
-      &-image-display{
-        width:8rem;
-        height:8rem;
+    &-img {
+      &--mohan {
+        width: 8rem;
+        height: 8rem;
         border-radius: 50%;
       }
     }
+  }
+  // &__right {
 
+  //   // @include mobile-padding;
+  // }
+  &__form {
+    width: 80%;
+    @include mobile-padding;
+    padding-top: 0;
+    @include display(flex, column);
+    &--button {
+      @include mobile-padding;
+      background-color: $primary-color2;
+      @include mob-body-font($primary-color3);
+      margin-top: 2rem;
+      border: none;
+      border-radius: 1rem;
+    }
+  }
+
+  &__user {
+    @include display(flex, column);
+    &-right {
+      @include display(flex, row);
+      list-style: none;
+
+      &-image-display {
+        @include mobile-padding;
+        width: 8rem;
+        height: 8rem;
+        border-radius: 50%;
+      }
+      // &-name-display {
+      // }
+      // &-comment-display {
+      // }
+      // &-date-display {
+
+      // }
+    }
+  }
 }
 
 #converstion {
