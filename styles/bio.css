@@ -824,15 +824,22 @@ template {
   padding-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  width: 20%;
+  width: 10%;
 }
 .conversation__left-img--mohan {
-  width: 8rem;
-  height: 8rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
 }
+.conversation__right {
+  width: 90%;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 .conversation__form {
-  width: 80%;
+  width: 90%;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
   padding-left: 1rem;
@@ -865,13 +872,29 @@ template {
   flex-direction: row;
   list-style: none;
 }
-.conversation__user-right-image-display {
+.conversation__user-right-comment-name-date {
+  width: 90%;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  width: 8rem;
-  height: 8rem;
+}
+.conversation__user-right-name-date {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.conversation__user-right-image-display {
+  width: 10%;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.conversation__user-right-image-display--inside {
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
 }
 
