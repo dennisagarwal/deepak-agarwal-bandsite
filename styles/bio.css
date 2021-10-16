@@ -864,23 +864,24 @@ template {
   border-radius: 1rem;
 }
 .conversation__user {
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
 .conversation__user-right {
+  width: 100%;
   display: flex;
   flex-direction: row;
   list-style: none;
 }
 .conversation__user-right-comment-name-date {
-  width: 90%;
+  width: 100%;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 .conversation__user-right-name-date {
-  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

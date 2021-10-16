@@ -327,16 +327,18 @@
   }
 
   &__user {
+    width: 100%;
     @include display(flex, column);
     &-right {
+      width: 100%;
       @include display(flex, row);
       list-style: none;
       &-comment-name-date {
-        width: 90%;
+        width: 100%;
         @include mobile-padding;
       }
       &-name-date {
-        width: 100%;
+
         @include display(flex, row);
         justify-content: space-between;
       }
