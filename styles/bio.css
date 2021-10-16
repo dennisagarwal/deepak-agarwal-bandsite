@@ -859,6 +859,14 @@ template {
   border: none;
   border-radius: 1rem;
 }
+.conversation__user-right {
+  list-style: none;
+}
+.conversation__user-image-display {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+}
 
 #converstion_name {
   font-family: "avenir-regular";

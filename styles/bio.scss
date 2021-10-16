@@ -324,6 +324,16 @@
         border-radius: 1rem;
       }
     }
+    &__user{
+      &-right{
+        list-style: none;
+      }
+      &-image-display{
+        width:8rem;
+        height:8rem;
+        border-radius: 50%;
+      }
+    }
 
 }
 
