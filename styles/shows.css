@@ -621,12 +621,32 @@ template {
     width: 30%;
   }
 }
+@media screen and (min-width: 767px) {
+  .concert-heading {
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+}
 .concert-heading__text {
   font-family: "avenir-bold";
   font-weight: bold;
   font-size: 1.5rem;
   line-height: 2rem;
   color: #000000;
+}
+@media screen and (min-width: 767px) {
+  .concert-heading__text {
+    font-family: "avenir-bold";
+    font-weight: bold;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    color: #000000;
+    font-family: "avenir-demi";
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 @media screen and (min-width: 1280px) {
   .concert__right {
@@ -648,9 +668,19 @@ template {
     padding-bottom: 0;
     justify-content: space-between;
   }
+}
+@media screen and (min-width: 767px) and (min-width: 767px) {
   .concert__table-list {
+    font-family: "avenir-regular";
+    font-weight: normal;
+    font: size 0.875rem;
+    line-height: 1.375rem;
+    color: #AFAFAF;
+    font-family: "avenir-demi";
     width: 20%;
   }
+}
+@media screen and (min-width: 767px) {
   .concert__table-hidden {
     visibility: hidden;
   }

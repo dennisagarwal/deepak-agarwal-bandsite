@@ -198,8 +198,17 @@
     }
   }
   &-heading {
+    @include tablet {
+    @include tablet-padding;
+    }
     &__text {
       @include mob-page-header-font($primary-color1);
+      @include tablet {
+        @include tab-page-header-font($primary-color1);
+        font-family: "avenir-demi";
+        margin-top: 0;
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -219,7 +228,11 @@
       @include desktop {
       }
       &-list {
+        @include tablet {
+        @include tab-body-font($primary-color6);
+        font-family: "avenir-demi";
         width: 20%;
+        }
       }
       //hidden element for proper spacing in column heading
       &-hidden {
