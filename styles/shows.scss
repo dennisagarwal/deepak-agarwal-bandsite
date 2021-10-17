@@ -288,8 +288,10 @@
       font-family: "avenir-demi";
       @include tablet {
         @include tab-body-font($primary-color3);
-        width: 20%;
+        width: 22%;
       }
     }
   }
 }
+
+
