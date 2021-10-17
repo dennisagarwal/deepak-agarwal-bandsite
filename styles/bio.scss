@@ -86,7 +86,7 @@
       rgba($primary-color1, 0.5),
       rgba($primary-color1, 0.5)
     ),
-    url("./assets/images/hero-bio.jpg");
+    url("../assets/images/hero-bio.jpg");
   background-position: center;
   background-size: cover;
   @include display(flex, row);
@@ -285,29 +285,46 @@
 }
 
 .conversation {
-  @include display(flex, column);
-
+  // @include display(flex, column);
+  &__desktop {
+    @include desktop {
+      @include display(flex, column);
+      justify-content: center;
+      width: 50%;
+      padding-left: 25%;
+      padding-right: 25%;
+    }
+  }
   &__bottom {
     @include mobile-padding;
     @include display(flex, row);
+    padding-top: 0;
+
     @include tablet {
       @include tablet-padding;
       // padding-top: 0;
       padding-left: 4.25rem;
       padding-right: 4.25rem;
-      border-bottom: 1px solid $primary-color2;
+      padding-bottom: 0;
     }
   }
   &__heading {
     @include mobile-padding;
+    padding-top: 0;
+    padding-bottom: 0;
     @include tablet {
       @include tablet-padding;
       padding-top: 0;
       padding-bottom: 0;
     }
+    @include desktop {
+      padding-left: 8rem;
+      padding-right: 8rem;
+    }
     &--text {
       @include mob-page-header-font($primary-color2);
       font-family: "avenir-demi";
+      margin-bottom: 0;
       @include tablet {
         @include tab-page-header-font($primary-color2);
         font-family: "avenir-demi";
@@ -318,22 +335,19 @@
   }
 
   &__left {
+    border-bottom: 1px solid $primary-color4;
     @include mobile-padding;
-    width: 10%;
+
+    width: 20%;
     @include tablet {
+      width: 20%;
       // @include tablet-padding;
+
       padding-top: 0;
       padding-left: 0;
       padding-right: 0;
     }
     &-img {
-      // @include mobile-padding;
-      // @include tablet {
-      //   // @include tablet-padding;
-      //   padding-top: 0;
-      //   padding-left: 0;
-      //   padding-right: 0;
-      // }
       &--mohan {
         width: 4rem;
         height: 4rem;
@@ -342,44 +356,74 @@
     }
   }
   &__right {
+    border-bottom: 1px solid $primary-color4;
     width: 90%;
     @include mobile-padding;
+    padding-top: 0;
+    padding-left: 0;
     @include tablet {
       @include tablet-padding;
       padding-top: 0;
-      padding-bottom: 0;
       padding-left: 0;
       padding-right: 0;
     }
+    &-user--text {
+      @include mob-body-font($primary-color6);
+      font-family: "avenir-demi";
+      @include mobile-padding;
+      padding-top: 0;
+      padding-left: 0;
+      @include tablet {
+        @include tab-body-font($primary-color6);
+      }
+    }
+    &-comment-name--text {
+      border-color: $primary-color6;
+      border-width: 0.01px;
+      margin-bottom: 1rem;
+      // border-style: none;
+      box-shadow: none;
+      @include mob-body-font($primary-color2);
+      @include mobile-padding;
+      background-color: $primary-color5;
+      border-radius: 0.5rem;
+      @include tablet {
+        @include tab-body-font($primary-color2);
+      }
+    }
   }
   &__form {
-    width: 100%;
     @include mobile-padding;
-    // padding-top: 0;
+    padding-top: 0;
+    padding-left: 0;
     @include display(flex, column);
     @include tablet {
       @include tablet-padding;
       padding-top: 0;
       padding-left: 0;
       padding-right: 0;
-      padding-bottom: 0
+      padding-bottom: 0;
     }
     &--button {
       @include mobile-padding;
-width:24%;
+      margin-top: 2rem;
+      border-radius: 0.5rem;
+      border: none;
       background-color: $primary-color2;
       @include mob-body-font($primary-color3);
-      margin-top: 2rem;
-      border: none;
-      border-radius: 1rem;
-     margin-left: auto;
+      @include tablet {
+        @include tab-body-font($primary-color3);
+        width: 30%;
+
+        margin-left: auto;
+      }
     }
   }
 
   &__user {
     @include mobile-padding;
-    // width: 100%;
     @include display(flex, column);
+    padding-top: 0;
 
     @include tablet {
       @include tablet-padding;
@@ -388,21 +432,36 @@ width:24%;
       padding-right: 4.25rem;
     }
     &-right {
-      width: 100%;
       @include display(flex, row);
       list-style: none;
-      border-bottom: 1px solid $primary-color2;
+      border-bottom: 1px solid $primary-color4;
       @include mobile-padding;
-      @include tablet{
-        @include tablet-padding;
-          padding-left: 0;
-          padding-right: 0;
-          // padding-top: 0;
-        }
-      &-comment-name-date {
-        width: 100%;
-        // @include mobile-padding;
+      padding-left: 0;
 
+      @include tablet {
+        @include tablet-padding;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        padding-top: 1rem;
+      }
+      &-name-display--text {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: "avenir-bold";
+      }
+      &-date-display--text {
+        @include mob-body-font($primary-color6);
+
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      &-comment-name-date {
+        @include mob-body-font($primary-color2);
+        width: 100%;
+        line-height: 1.5;
+        // @include mobile-padding;
       }
       &-name-date {
         width: 100%;
@@ -410,13 +469,13 @@ width:24%;
         justify-content: space-between;
         padding-top: 0;
       }
-      // @include display(flex, row);
-      // list-style: none;
 
       &-image-display {
-        width: 10%;
+        width: 20%;
         @include mobile-padding;
+        padding-top: 0;
         @include tablet {
+          width: 20%;
           @include tablet-padding;
           padding-left: 0;
           padding-right: 0;
