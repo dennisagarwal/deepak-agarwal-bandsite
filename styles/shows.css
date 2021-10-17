@@ -475,6 +475,10 @@ template {
 }
 @media screen and (min-width: 1280px) {
   .beautiful-beast {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
     height: 85vh;
   }
 }
@@ -498,6 +502,7 @@ template {
 }
 @media screen and (min-width: 1280px) {
   .beautiful-beast__header {
+    width: 40rem;
     padding-left: 8rem;
   }
 }
@@ -520,6 +525,13 @@ template {
     font-size: 2.5rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .beautiful-beast__header-1--heading-line-1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+  }
+}
 .beautiful-beast__header-2--heading-line-2 {
   font-family: "avenir-bold";
   font-weight: bold;
@@ -537,6 +549,13 @@ template {
     color: #FFFFFF;
     margin-top: 0;
     font-size: 4.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .beautiful-beast__header-2--heading-line-2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 3rem;
   }
 }
 .beautiful-beast__song {
@@ -557,10 +576,32 @@ template {
     padding-top: 0;
   }
 }
+@media screen and (min-width: 1280px) {
+  .beautiful-beast__song {
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
 .beautiful-beast__song--i-frame {
   height: 80%;
   padding-top: 0;
   border-radius: 0.5rem;
+}
+@media screen and (min-width: 1280px) {
+  .beautiful-beast__song--i-frame {
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    padding-left: 0;
+    padding-bottom: 0;
+    height: 50%;
+    width: 75%;
+  }
 }
 
 .concert {
