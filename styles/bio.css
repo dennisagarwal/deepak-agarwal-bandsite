@@ -803,8 +803,23 @@ template {
   flex-direction: column;
 }
 .conversation__bottom {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   display: flex;
   flex-direction: row;
+}
+@media screen and (min-width: 767px) {
+  .conversation__bottom {
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    padding-left: 4.25rem;
+    padding-right: 4.25rem;
+    border-bottom: 1px solid #323232;
+  }
 }
 .conversation__heading {
   padding-top: 1.5rem;
@@ -812,12 +827,34 @@ template {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+@media screen and (min-width: 767px) {
+  .conversation__heading {
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
 .conversation__heading--text {
   font-family: "avenir-bold";
   font-weight: bold;
   font-size: 1.5rem;
   line-height: 2rem;
   color: #323232;
+  font-family: "avenir-demi";
+}
+@media screen and (min-width: 767px) {
+  .conversation__heading--text {
+    font-family: "avenir-bold";
+    font-weight: bold;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    color: #323232;
+    font-family: "avenir-demi";
+    margin-bottom: 0;
+  }
 }
 .conversation__left {
   padding-top: 1.5rem;
@@ -825,6 +862,13 @@ template {
   padding-left: 1rem;
   padding-right: 1rem;
   width: 10%;
+}
+@media screen and (min-width: 767px) {
+  .conversation__left {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 .conversation__left-img--mohan {
   width: 4rem;
@@ -838,21 +882,45 @@ template {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+@media screen and (min-width: 767px) {
+  .conversation__right {
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 .conversation__form {
-  width: 90%;
+  width: 100%;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: 0;
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 767px) {
+  .conversation__form {
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
 }
 .conversation__form--button {
   padding-top: 1.5rem;
   padding-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  width: 24%;
   background-color: #323232;
   font-family: "avenir-regular";
   font-weight: normal;
@@ -862,29 +930,57 @@ template {
   margin-top: 2rem;
   border: none;
   border-radius: 1rem;
+  margin-left: auto;
 }
 .conversation__user {
-  width: 100%;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 767px) {
+  .conversation__user {
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    padding-top: 0;
+    padding-left: 4.25rem;
+    padding-right: 4.25rem;
+  }
 }
 .conversation__user-right {
   width: 100%;
   display: flex;
   flex-direction: row;
   list-style: none;
-}
-.conversation__user-right-comment-name-date {
-  width: 100%;
+  border-bottom: 1px solid #323232;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
+@media screen and (min-width: 767px) {
+  .conversation__user-right {
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.conversation__user-right-comment-name-date {
+  width: 100%;
+}
 .conversation__user-right-name-date {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-top: 0;
 }
 .conversation__user-right-image-display {
   width: 10%;
@@ -892,6 +988,17 @@ template {
   padding-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+@media screen and (min-width: 767px) {
+  .conversation__user-right-image-display {
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+  }
 }
 .conversation__user-right-image-display--inside {
   width: 4rem;

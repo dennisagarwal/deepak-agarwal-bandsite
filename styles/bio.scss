@@ -286,19 +286,54 @@
 
 .conversation {
   @include display(flex, column);
+
   &__bottom {
+    @include mobile-padding;
     @include display(flex, row);
+    @include tablet {
+      @include tablet-padding;
+      // padding-top: 0;
+      padding-left: 4.25rem;
+      padding-right: 4.25rem;
+      border-bottom: 1px solid $primary-color2;
+    }
   }
   &__heading {
     @include mobile-padding;
+    @include tablet {
+      @include tablet-padding;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
     &--text {
       @include mob-page-header-font($primary-color2);
+      font-family: "avenir-demi";
+      @include tablet {
+        @include tab-page-header-font($primary-color2);
+        font-family: "avenir-demi";
+        // margin-top: 0;
+        margin-bottom: 0;
+      }
     }
   }
+
   &__left {
     @include mobile-padding;
     width: 10%;
+    @include tablet {
+      // @include tablet-padding;
+      padding-top: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
     &-img {
+      // @include mobile-padding;
+      // @include tablet {
+      //   // @include tablet-padding;
+      //   padding-top: 0;
+      //   padding-left: 0;
+      //   padding-right: 0;
+      // }
       &--mohan {
         width: 4rem;
         height: 4rem;
@@ -309,38 +344,71 @@
   &__right {
     width: 90%;
     @include mobile-padding;
-
+    @include tablet {
+      @include tablet-padding;
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
   &__form {
-    width: 90%;
+    width: 100%;
     @include mobile-padding;
-    padding-top: 0;
+    // padding-top: 0;
     @include display(flex, column);
+    @include tablet {
+      @include tablet-padding;
+      padding-top: 0;
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 0
+    }
     &--button {
       @include mobile-padding;
+width:24%;
       background-color: $primary-color2;
       @include mob-body-font($primary-color3);
       margin-top: 2rem;
       border: none;
       border-radius: 1rem;
+     margin-left: auto;
     }
   }
 
   &__user {
-    width: 100%;
+    @include mobile-padding;
+    // width: 100%;
     @include display(flex, column);
+
+    @include tablet {
+      @include tablet-padding;
+      padding-top: 0;
+      padding-left: 4.25rem;
+      padding-right: 4.25rem;
+    }
     &-right {
       width: 100%;
       @include display(flex, row);
       list-style: none;
+      border-bottom: 1px solid $primary-color2;
+      @include mobile-padding;
+      @include tablet{
+        @include tablet-padding;
+          padding-left: 0;
+          padding-right: 0;
+          // padding-top: 0;
+        }
       &-comment-name-date {
         width: 100%;
-        @include mobile-padding;
+        // @include mobile-padding;
+
       }
       &-name-date {
-
+        width: 100%;
         @include display(flex, row);
         justify-content: space-between;
+        padding-top: 0;
       }
       // @include display(flex, row);
       // list-style: none;
@@ -348,7 +416,12 @@
       &-image-display {
         width: 10%;
         @include mobile-padding;
-
+        @include tablet {
+          @include tablet-padding;
+          padding-left: 0;
+          padding-right: 0;
+          padding-top: 0;
+        }
         &--inside {
           width: 4rem;
           height: 4rem;
