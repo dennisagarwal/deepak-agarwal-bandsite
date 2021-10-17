@@ -470,7 +470,7 @@ template {
 }
 @media screen and (min-width: 767px) {
   .bees-knees {
-    height: 26rem;
+    height: 85vh;
   }
 }
 @media screen and (min-width: 1280px) {

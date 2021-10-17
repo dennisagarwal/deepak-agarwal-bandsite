@@ -86,6 +86,4 @@ for (i = 0; i < shows.length; i++) {
   paraButton.innerText="BUY TICKETS";
   newDiv.appendChild(paraButton);
 
-
-  console.log(newDiv);
 }
