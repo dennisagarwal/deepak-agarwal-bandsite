@@ -213,6 +213,8 @@
     @include tablet {
       @include display(flex, row);
       @include tablet-padding;
+      padding-top: 0;
+      padding-bottom: 0;
       justify-content: space-between;
       @include desktop {
       }
@@ -231,21 +233,27 @@
     padding-bottom: 2rem;
     @include tablet {
       @include tablet-padding;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
       @include display(flex, row);
       justify-content: space-between;
-      align-content: center;
+      align-items: center;
     }
     &__text {
       @include mob-body-font($primary-color6);
+      font-family: "avenir-demi";
       @include tablet {
         display: none;
       }
     }
     &__date {
       @include mob-body-font($primary-color2);
+      font-family: "avenir-demi";
+
     }
     &__venue {
       @include mob-body-font($primary-color1);
+
     }
     &__location {
       @include mob-body-font($primary-color1);
