@@ -350,114 +350,6 @@ template {
   font-family: "avenir-demi";
   src: url("../assets/font/AvenirNextLTPro-Demi.otf");
 }
-.header {
-  background-color: #323232;
-  display: flex;
-  flex-direction: column;
-}
-@media screen and (min-width: 767px) {
-  .header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .header {
-    height: 15vh;
-  }
-}
-.header__nav {
-  margin: 1rem auto;
-}
-.header__nav--logo {
-  text-decoration: none;
-  font-family: "avenir-regular";
-  font-weight: bold;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  color: white;
-  width: 7.5rem;
-  text-transform: uppercase;
-  padding-top: 1.5rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  font-weight: normal;
-}
-@media screen and (min-width: 767px) {
-  .header__nav--logo {
-    padding-top: 3rem;
-    padding-bottom: 2.25rem;
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
-  }
-}
-@media screen and (min-width: 767px) and (min-width: 1280px) {
-  .header__nav--logo {
-    padding: 3rem 0 0 8rem;
-  }
-}
-.header__primary-nav {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  padding-left: 0;
-  margin-bottom: 0;
-  margin-top: 0;
-}
-.header__primary-nav-list {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-around;
-  color: #e1e1e1;
-}
-@media screen and (min-width: 767px) {
-  .header__primary-nav-list {
-    align-items: center;
-    justify-content: center;
-    width: 14%;
-    display: flex;
-    flex-direction: row;
-    height: 6.18rem;
-    padding-bottom: 0rem;
-    border-bottom: 0rem;
-  }
-}
-.header__primary-nav-list--anchor {
-  text-align: center;
-  width: 100%;
-  text-decoration: none;
-  font-family: "avenir-regular";
-  font-weight: normal;
-  font-size: 1.125rem;
-  line-height: 0.875rem;
-  color: #e1e1e1;
-  padding-bottom: 1rem;
-}
-@media screen and (min-width: 767px) {
-  .header__primary-nav-list--anchor {
-    width: auto;
-    padding: 2.55rem 0 2.55rem 0;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .header__primary-nav-list--anchor {
-    padding: 3rem 0 3rem 0;
-  }
-}
-.header__primary-nav-list :hover {
-  font-weight: 700;
-  color: #FFFFFF;
-}
-.header__primary-nav-list--current {
-  font-weight: 700;
-  color: #FFFFFF;
-  border-bottom: 0.2rem solid #FFFFFF;
-}
-
 .beautiful-beast {
   width: 100%;
   height: 30rem;
@@ -618,6 +510,7 @@ template {
 }
 @media screen and (min-width: 1280px) {
   .concert__left {
+    padding-left: 8rem;
     width: 30%;
   }
 }
@@ -637,6 +530,11 @@ template {
     padding-bottom: 2.25rem;
     padding-left: 2.25rem;
     padding-right: 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .concert-heading {
+    padding-left: 0;
   }
 }
 .concert-heading__text {
@@ -660,6 +558,7 @@ template {
 }
 @media screen and (min-width: 1280px) {
   .concert__right {
+    padding-right: 6rem;
     width: 70%;
   }
 }
@@ -703,6 +602,15 @@ template {
     visibility: hidden;
   }
 }
+.concert__show :hover {
+  background-color: #AFAFAF;
+}
+.concert__show :focus {
+  background-color: #e1e1e1;
+}
+.concert__show :active {
+  background-color: #e1e1e1 !important;
+}
 .concert-detail {
   border-bottom: 1px solid #e1e1e1;
   padding-bottom: 2rem;
@@ -715,10 +623,16 @@ template {
     padding-right: 2.25rem;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+    padding-right: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .concert-detail {
+    padding-right: 0;
   }
 }
 .concert-detail__text {

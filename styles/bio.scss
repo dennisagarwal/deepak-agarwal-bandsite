@@ -93,7 +93,7 @@
   align-items: center;
 
   @include tablet {
-    height: 85vh;;
+    height: 85vh;
   }
   @include desktop {
     height: 85vh;
@@ -285,7 +285,6 @@
 }
 
 .conversation {
-  // @include display(flex, column);
   &__desktop {
     @include desktop {
       @include display(flex, column);
@@ -302,7 +301,6 @@
 
     @include tablet {
       @include tablet-padding;
-      // padding-top: 0;
       padding-left: 4.25rem;
       padding-right: 4.25rem;
       padding-bottom: 0;
@@ -328,7 +326,6 @@
       @include tablet {
         @include tab-page-header-font($primary-color2);
         font-family: "avenir-demi";
-        // margin-top: 0;
         margin-bottom: 0;
       }
     }
@@ -341,7 +338,6 @@
     width: 20%;
     @include tablet {
       width: 20%;
-      // @include tablet-padding;
 
       padding-top: 0;
       padding-left: 0;
