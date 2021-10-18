@@ -374,15 +374,15 @@
       }
     }
     &-comment-name--text {
-      border-color: $primary-color6;
-      border-width: 0.01px;
+      border-color: $primary-color4;
+      border-width: 1px;
       margin-bottom: 1rem;
-      // border-style: none;
       box-shadow: none;
       @include mob-body-font($primary-color2);
       @include mobile-padding;
       background-color: $primary-color5;
       border-radius: 0.5rem;
+
       @include tablet {
         @include tab-body-font($primary-color2);
       }
@@ -410,7 +410,6 @@
       @include tablet {
         @include tab-body-font($primary-color3);
         width: 30%;
-
         margin-left: auto;
       }
     }
@@ -448,7 +447,6 @@
       }
       &-date-display--text {
         @include mob-body-font($primary-color6);
-
         margin-top: 0;
         margin-bottom: 0;
       }
@@ -457,7 +455,6 @@
         @include mob-body-font($primary-color2);
         width: 100%;
         line-height: 1.5;
-        // @include mobile-padding;
       }
       &-name-date {
         width: 100%;
