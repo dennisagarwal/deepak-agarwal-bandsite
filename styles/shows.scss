@@ -210,14 +210,15 @@
     &__date {
       @include mob-body-font($primary-color2);
       font-family: "avenir-demi";
-
+      width: 26%;
     }
     &__venue {
       @include mob-body-font($primary-color1);
-
+      width: 24%;
     }
     &__location {
       @include mob-body-font($primary-color1);
+      width: 26%;
     }
     &__button {
       width: 100%;
