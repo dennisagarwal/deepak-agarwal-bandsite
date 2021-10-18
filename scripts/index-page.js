@@ -98,12 +98,7 @@ conversationForm.addEventListener("submit", (event) => {
 
   const comment = document.getElementById("conversation__comment").value;
   const name = document.getElementById("conversation__name").value;
-  const date =
-    currentdate.getMonth() +
-    "/" +
-    currentdate.getDate() +
-    "/" +
-    currentdate.getFullYear();
+  const date =(currentdate.getMonth()+1) +"/" + currentdate.getDate() + "/" + currentdate.getFullYear();
   const image = "./assets/images/Mohan-muruge.jpg";
   userDetail.unshift(createDetail(name, date, comment, image));
   userDetail.pop();
