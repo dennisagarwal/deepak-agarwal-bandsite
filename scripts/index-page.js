@@ -1,10 +1,9 @@
-var currentdate = new Date();
-
-
+let currentdate = new Date();
 
 const conversationUser = document.querySelector(".conversation__user");
 const conversationForm = document.querySelector(".conversation__form");
 
+conversationForm.addEventListener("submit",handleConversationFormSubmit);
 
 function getAllComments() {
   axios
@@ -12,30 +11,35 @@ function getAllComments() {
       ` https://project-1-api.herokuapp.com/comments?api_key=4f7ce3b1-e392-4f50-92a1-941144a00017`
     )
     .then((result) => {
-      // console.log(result);
-      // console.log(result.data);
-      console.log('comment data', result);
+
+      // save array of allComments in variable `comments`, sort by timestamp before looping
+      const user = result.data.sort(
+        (a, b) => new Date(b.posted) - new Date(a.posted)
+      );
+
+      conversationUser.innerHTML="";
 
       result.data.forEach((user) => {
-        console.log(user);
-        // console.log(user.name);
-        // console.log(user.comment);
 
         const conversationUserRight = document.createElement("div");
         conversationUserRight.classList.add("conversation__user-right");
 
         const userImageDisplay = document.createElement("div");
-        userImageDisplay.classList.add("conversation__user-right-image-display");
+        userImageDisplay.classList.add(
+          "conversation__user-right-image-display"
+        );
         const userImageInside = document.createElement("img");
         userImageInside.setAttribute("src", "./assets/images/Mohan-muruge.jpg");
-        userImageInside.classList.add("conversation__user-right-image-display--inside");
+        userImageInside.classList.add(
+          "conversation__user-right-image-display--inside"
+        );
         userImageDisplay.appendChild(userImageInside);
         conversationUserRight.appendChild(userImageDisplay);
 
         const userCommentNameDate = document.createElement("div");
-        userCommentNameDate.classList.add("conversation__user-right-comment-name-date");
-
-
+        userCommentNameDate.classList.add(
+          "conversation__user-right-comment-name-date"
+        );
 
         const userNameDate = document.createElement("div");
         userNameDate.classList.add("conversation__user-right-name-date");
@@ -43,28 +47,32 @@ function getAllComments() {
         const userNameDisplay = document.createElement("div");
         const userNameText = document.createElement("p");
         userNameText.innerText = user.name;
-        userNameText.classList.add("conversation__user-right-name-display--text");
+        userNameText.classList.add(
+          "conversation__user-right-name-display--text"
+        );
         userNameDisplay.appendChild(userNameText);
         userNameDate.appendChild(userNameDisplay);
         userCommentNameDate.appendChild(userNameDate);
         // conversationUserRight.appendChild(userCommentNameDate);
 
         const userDateDisplay = document.createElement("div");
-    const userDateText = document.createElement("p");
-    userDateText.innerText = user.timestamp;
-    userDateText.classList.add("conversation__user-right-date-display--text");
-    userDateDisplay.appendChild(userDateText);
-    userNameDate.appendChild(userDateDisplay);
-    userCommentNameDate.appendChild(userNameDate);
-
+        const userDateText = document.createElement("p");
+        userDateText.innerText = user.timestamp;
+        userDateText.classList.add(
+          "conversation__user-right-date-display--text"
+        );
+        userDateDisplay.appendChild(userDateText);
+        userNameDate.appendChild(userDateDisplay);
+        userCommentNameDate.appendChild(userNameDate);
 
         const userCommentDisplay = document.createElement("div");
         const userCommentText = document.createElement("p");
         userCommentText.innerText = user.comment;
-        userCommentText.classList.add( "conversation__user-right-comment-display--text");
+        userCommentText.classList.add(
+          "conversation__user-right-comment-display--text"
+        );
         userCommentDisplay.appendChild(userCommentText);
         userCommentNameDate.appendChild(userCommentDisplay);
-
 
         conversationUserRight.appendChild(userCommentNameDate);
         conversationUser.appendChild(conversationUserRight);
@@ -77,8 +85,8 @@ function getAllComments() {
 
 // getAllComments();
 
-
-function handleUserFormSubmit(event) {
+function handleConversationFormSubmit(event)  {
+  // function UserFormSubmit(event) {
   event.preventDefault();
   // create a new user object
   const newUser = {
@@ -86,16 +94,20 @@ function handleUserFormSubmit(event) {
     comment: event.target.conversation__comment.value,
   };
   // post new user
-  axios
-    .post(`https://project-1-api.herokuapp.com/comments?api_key=4f7ce3b1-e392-4f50-92a1-941144a00017`, newUser)
-    .then((result) => {
-      console.log(result);
 
+  axios
+    .post(
+      "https://project-1-api.herokuapp.com/comments?api_key=4f7ce3b1-e392-4f50-92a1-941144a00017",
+      newUser
+    )
+    .then((result) => {
       getAllComments();
       event.target.reset();
     })
     .catch(() => console.log(`error posting to api`));
-}
+
+
+};
 
 // Start the appication, runs as soon as the JS file is loaded
 function init() {
@@ -105,5 +117,3 @@ function init() {
 
 // call function to start the application
 init();
-
-
