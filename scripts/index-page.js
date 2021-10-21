@@ -3,7 +3,7 @@
 const conversationUser = document.querySelector(".conversation__user");
 const conversationForm = document.querySelector(".conversation__form");
 
-conversationForm.addEventListener("submit",handleConversationFormSubmit);
+conversationForm.addEventListener("submit", handleConversationFormSubmit);
 
 function getAllComments() {
   axios
@@ -11,16 +11,15 @@ function getAllComments() {
       ` https://project-1-api.herokuapp.com/comments?api_key=4f7ce3b1-e392-4f50-92a1-941144a00017`
     )
     .then((result) => {
-
+      console.log(result.data);
       // save array of allComments in variable `comments`, sort by timestamp before looping
-      const userDetails = result.data.sort(
-        (a, b) => new Date(b.posted) - new Date(a.posted)
+      const userDates = result.data.sort(
+        (a, b) => new Date(b.timestamp) - new Date(a.timestamp)
       );
+      console.log(userDates);
+      conversationUser.innerHTML = "";
 
-      conversationUser.innerHTML="";
-
-      userDetails.forEach((user) => {
-
+      userDates.forEach((user) => {
         const conversationUserRight = document.createElement("div");
         conversationUserRight.classList.add("conversation__user-right");
 
@@ -85,7 +84,7 @@ function getAllComments() {
 
 // getAllComments();
 
-function handleConversationFormSubmit(event)  {
+function handleConversationFormSubmit(event) {
   // function UserFormSubmit(event) {
   event.preventDefault();
   // create a new user object
@@ -103,12 +102,10 @@ function handleConversationFormSubmit(event)  {
     .then((result) => {
       getAllComments();
       event.target.reset();
-      console.log(result)
+      console.log(result);
     })
     .catch(() => console.log(`error posting to api`));
-
-
-};
+}
 
 // Start the appication, runs as soon as the JS file is loaded
 function init() {
