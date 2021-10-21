@@ -1,4 +1,4 @@
-let currentdate = new Date();
+// let currentdate = new Date();
 
 const conversationUser = document.querySelector(".conversation__user");
 const conversationForm = document.querySelector(".conversation__form");
@@ -13,13 +13,13 @@ function getAllComments() {
     .then((result) => {
 
       // save array of allComments in variable `comments`, sort by timestamp before looping
-      const user = result.data.sort(
+      const userDetails = result.data.sort(
         (a, b) => new Date(b.posted) - new Date(a.posted)
       );
 
       conversationUser.innerHTML="";
 
-      result.data.forEach((user) => {
+      userDetails.forEach((user) => {
 
         const conversationUserRight = document.createElement("div");
         conversationUserRight.classList.add("conversation__user-right");
@@ -103,6 +103,7 @@ function handleConversationFormSubmit(event)  {
     .then((result) => {
       getAllComments();
       event.target.reset();
+      console.log(result)
     })
     .catch(() => console.log(`error posting to api`));
 
