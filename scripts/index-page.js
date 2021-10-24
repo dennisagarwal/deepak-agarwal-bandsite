@@ -13,13 +13,13 @@ function getAllComments() {
     .then((result) => {
       console.log(result.data);
       // save array of allComments in variable `comments`, sort by timestamp before looping
-      const userDates = result.data.sort(
+      const userDetail = result.data.sort(
         (a, b) => new Date(b.timestamp) - new Date(a.timestamp)
       );
-      console.log(userDates);
       conversationUser.innerHTML = "";
 
-      userDates.forEach((user) => {
+      userDetail.forEach((user) => {
+
         const conversationUserRight = document.createElement("div");
         conversationUserRight.classList.add("conversation__user-right");
 
@@ -56,7 +56,7 @@ function getAllComments() {
 
         const userDateDisplay = document.createElement("div");
         const userDateText = document.createElement("p");
-        userDateText.innerText = user.timestamp;
+        userDateText.innerText = new Date(user.timestamp).toLocaleDateString("en-US")
         userDateText.classList.add(
           "conversation__user-right-date-display--text"
         );
