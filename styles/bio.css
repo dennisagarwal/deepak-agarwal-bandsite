@@ -990,6 +990,7 @@ template {
   padding-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  padding-bottom: 1.5rem;
   margin-top: 2rem;
   border-radius: 0.5rem;
   border: none;
@@ -999,6 +1000,7 @@ template {
   font-size: 1.125rem;
   line-height: 0.875rem;
   color: #FFFFFF;
+  height: 4.125rem;
 }
 @media screen and (min-width: 767px) {
   .conversation__form--button {
@@ -1009,6 +1011,7 @@ template {
     color: #FFFFFF;
     width: 30%;
     margin-left: auto;
+    height: 4.125rem;
   }
 }
 .conversation__user {

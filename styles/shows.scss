@@ -227,22 +227,30 @@
 
     &__venue {
       @include mob-body-font($primary-color1);
-      width: 24%;
+      width: 28%;
+      @include tablet {
+        width: 24%;
+      }
     }
 
     &__location {
       @include mob-body-font($primary-color1);
-      width: 26%;
+      width: 35%;
+      @include tablet {
+        width: 26%;
+      }
     }
 
     &__button {
       width: 100%;
       @include mobile-padding;
+      padding-bottom: 1.5rem;
       background-color: $primary-color2;
       border: none;
       border-radius: 0.3125rem;
       @include mob-body-font($primary-color3);
       font-family: "avenir-demi";
+      height: 4.125rem;
       @include tablet {
         @include tab-body-font($primary-color3);
         width: 22%;

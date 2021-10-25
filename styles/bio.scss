@@ -426,15 +426,18 @@
 
     &--button {
       @include mobile-padding;
+      padding-bottom: 1.5rem;
       margin-top: 2rem;
       border-radius: 0.5rem;
       border: none;
       background-color: $primary-color2;
       @include mob-body-font($primary-color3);
+      height: 4.125rem;
       @include tablet {
         @include tab-body-font($primary-color3);
         width: 30%;
         margin-left: auto;
+        height: 4.125rem;
       }
     }
   }
