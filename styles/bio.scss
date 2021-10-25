@@ -396,6 +396,7 @@
     }
 
     &-comment-name--text {
+      resize: none;
       border-color: $primary-color4;
       border-width: 1px;
       margin-bottom: 1rem;

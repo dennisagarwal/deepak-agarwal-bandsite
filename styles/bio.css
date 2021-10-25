@@ -938,6 +938,7 @@ template {
   }
 }
 .conversation__right-comment-name--text {
+  resize: none;
   border-color: #e1e1e1;
   border-width: 1px;
   margin-bottom: 1rem;
