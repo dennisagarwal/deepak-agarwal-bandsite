@@ -609,7 +609,7 @@ template {
   background-color: #e1e1e1;
 }
 .concert__show :active {
-  background-color: #e1e1e1 !important;
+  background-color: #e1e1e1;
 }
 .concert-detail {
   border-bottom: 1px solid #e1e1e1;

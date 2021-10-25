@@ -1,4 +1,3 @@
-
 let concert = document.querySelector(".concert__show");
 let paraText = document.createElement("p");
 

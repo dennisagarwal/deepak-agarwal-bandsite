@@ -82,7 +82,6 @@ function getAllComments() {
 }
 
 // getAllComments();
-
 function handleConversationFormSubmit(event) {
   // function UserFormSubmit(event) {
   event.preventDefault();
@@ -91,8 +90,8 @@ function handleConversationFormSubmit(event) {
     name: event.target.conversation_name.value,
     comment: event.target.conversation__comment.value,
   };
-  // post new user
 
+  // post new user
   axios
     .post(
       "https://project-1-api.herokuapp.com/comments?api_key=4f7ce3b1-e392-4f50-92a1-941144a00017",
