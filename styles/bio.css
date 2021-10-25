@@ -445,7 +445,7 @@ template {
 }
 @media screen and (min-width: 1280px) {
   .bandsite-header__primary-nav-list--anchor {
-    padding: 3rem 0 3rem 0;
+    padding: 3rem 0 2.2rem 0;
   }
 }
 .bandsite-header__primary-nav-list :hover {
