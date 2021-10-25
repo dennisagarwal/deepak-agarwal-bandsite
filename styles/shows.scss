@@ -107,7 +107,6 @@
 
 .concert {
   @include display(flex, column);
-  // @include mobile-padding;
   padding-right: 1rem;
   padding-left: 1rem;
   @include desktop {
@@ -198,6 +197,7 @@
   &-detail {
     border-bottom: 1px solid $primary-color4;
     padding-bottom: 2rem;
+    margin-bottom:1rem;
     @include tablet {
       @include tablet-padding;
       padding-top: 1.5rem;

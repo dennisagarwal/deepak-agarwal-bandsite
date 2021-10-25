@@ -614,6 +614,7 @@ template {
 .concert-detail {
   border-bottom: 1px solid #e1e1e1;
   padding-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 @media screen and (min-width: 767px) {
   .concert-detail {
