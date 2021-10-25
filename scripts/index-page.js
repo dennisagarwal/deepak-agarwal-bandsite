@@ -11,7 +11,6 @@ function getAllComments() {
       ` https://project-1-api.herokuapp.com/comments?api_key=4f7ce3b1-e392-4f50-92a1-941144a00017`
     )
     .then((result) => {
-      console.log(result.data);
       // save array of allComments in variable `comments`, sort by timestamp before looping
       const userDetail = result.data.sort(
         (a, b) => new Date(b.timestamp) - new Date(a.timestamp)
@@ -102,7 +101,6 @@ function handleConversationFormSubmit(event) {
     .then((result) => {
       getAllComments();
       event.target.reset();
-      console.log(result);
     })
     .catch(() => console.log(`error posting to api`));
 }
