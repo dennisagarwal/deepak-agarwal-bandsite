@@ -36,6 +36,7 @@
     padding-left: 0;
     margin-bottom: 0;
     margin-top: 0;
+
     &-list {
       list-style: none;
       @include display(flex, row);
@@ -66,10 +67,12 @@
           padding: 3rem 0 3rem 0;
         }
       }
+
       :hover {
         font-weight: 700;
         color: $primary-color3;
       }
+
       &--current {
         font-weight: 700;
         color: $primary-color3;
@@ -98,6 +101,7 @@
   @include desktop {
     height: 85vh;
   }
+
   &__header {
     @include mobile-padding;
     @include tablet {
@@ -118,6 +122,7 @@
 }
 
 .musicians {
+
   &__header {
     @include mobile-padding;
     @include tablet {
@@ -136,6 +141,7 @@
       }
     }
   }
+
   &__img {
     @include mobile-padding;
     padding: 0 1rem 0 1rem;
@@ -156,6 +162,7 @@
       }
     }
   }
+
   &__text {
     flex-wrap: wrap;
     @include mobile-padding;
@@ -180,6 +187,7 @@
         font-weight: 700;
       }
     }
+
     &--para2 {
       margin-bottom: 0;
       margin-top: 0;
@@ -194,6 +202,7 @@
       }
     }
   }
+
   &__desc {
     @include tablet {
       padding: 2rem 4.25rem 0 4.25rem;
@@ -201,11 +210,13 @@
     @include desktop {
       padding: 0 13rem;
     }
+
     &-header {
       @include mobile-padding;
       @include tablet {
         padding: 0;
       }
+
       &--heading {
         @include mob-sub-header-font($primary-color1);
         margin-top: 0;
@@ -242,6 +253,7 @@
     }
   }
 }
+
 .photo-gallery {
   background-color: $primary-color5;
   @include mobile-padding;
@@ -251,6 +263,7 @@
   @include desktop {
     padding: 3rem 8rem 2.25rem 8rem;
   }
+
   &__header {
     &--heading {
       @include mob-page-header-font($primary-color2);
@@ -261,6 +274,7 @@
       }
     }
   }
+
   &__img {
     @include display(flex, column);
     align-items: center;
@@ -269,6 +283,7 @@
       @include display(flex, row);
       justify-content: space-between;
     }
+
     &--size {
       filter: grayscale(1);
       width: 100%;
@@ -278,6 +293,7 @@
         width: 30%;
       }
     }
+
     :hover {
       filter: grayscale(0);
     }
@@ -285,6 +301,7 @@
 }
 
 .conversation {
+
   &__desktop {
     @include desktop {
       @include display(flex, column);
@@ -294,6 +311,7 @@
       padding-right: 25%;
     }
   }
+
   &__bottom {
     @include mobile-padding;
     @include display(flex, row);
@@ -306,6 +324,7 @@
       padding-bottom: 0;
     }
   }
+
   &__heading {
     @include mobile-padding;
     padding-top: 0;
@@ -319,6 +338,7 @@
       padding-left: 8rem;
       padding-right: 8rem;
     }
+
     &--text {
       @include mob-page-header-font($primary-color2);
       font-family: "avenir-demi";
@@ -334,15 +354,14 @@
   &__left {
     border-bottom: 1px solid $primary-color4;
     @include mobile-padding;
-
     width: 20%;
     @include tablet {
       width: 20%;
-
       padding-top: 0;
       padding-left: 0;
       padding-right: 0;
     }
+
     &-img {
       &--mohan {
         width: 4rem;
@@ -351,6 +370,7 @@
       }
     }
   }
+
   &__right {
     border-bottom: 1px solid $primary-color4;
     width: 90%;
@@ -363,6 +383,7 @@
       padding-left: 0;
       padding-right: 0;
     }
+
     &-user--text {
       @include mob-body-font($primary-color6);
       font-family: "avenir-demi";
@@ -373,6 +394,7 @@
         @include tab-body-font($primary-color6);
       }
     }
+
     &-comment-name--text {
       border-color: $primary-color4;
       border-width: 1px;
@@ -388,6 +410,7 @@
       }
     }
   }
+
   &__form {
     @include mobile-padding;
     padding-top: 0;
@@ -400,6 +423,7 @@
       padding-right: 0;
       padding-bottom: 0;
     }
+
     &--button {
       @include mobile-padding;
       margin-top: 2rem;
@@ -419,20 +443,19 @@
     @include mobile-padding;
     @include display(flex, column);
     padding-top: 0;
-
     @include tablet {
       @include tablet-padding;
       padding-top: 0;
       padding-left: 4.25rem;
       padding-right: 4.25rem;
     }
+
     &-right {
       @include display(flex, row);
       list-style: none;
       border-bottom: 1px solid $primary-color4;
       @include mobile-padding;
       padding-left: 0;
-
       @include tablet {
         @include tablet-padding;
         padding-left: 0;
@@ -440,11 +463,13 @@
         padding-bottom: 0;
         padding-top: 1rem;
       }
+
       &-name-display--text {
         margin-top: 0;
         margin-bottom: 0;
         font-family: "avenir-bold";
       }
+
       &-date-display--text {
         @include mob-body-font($primary-color6);
         margin-top: 0;
@@ -456,6 +481,7 @@
         width: 100%;
         line-height: 1.5;
       }
+
       &-name-date {
         width: 100%;
         @include display(flex, row);
@@ -474,6 +500,7 @@
           padding-right: 0;
           padding-top: 0;
         }
+
         &--inside {
           width: 4rem;
           height: 4rem;
@@ -485,11 +512,13 @@
 }
 
 #converstion {
+
   &_name {
     @include mob-body-font($primary-color2);
     @include mobile-padding;
     padding-left: 0;
   }
+
   &_comment {
     @include mob-body-font($primary-color2);
     @include mobile-padding;
@@ -507,17 +536,20 @@
     padding-left: 8rem;
     padding-right: 8rem;
   }
+
   &__top {
     @include tablet {
       height: 5.75rem;
       @include display(flex, row);
     }
   }
+
   &__header {
     @include tablet {
       padding-top: 0;
       padding-bottom: 0;
     }
+
     &--heading {
       width: 22.5rem;
       @include mobile-padding;
@@ -532,6 +564,7 @@
       }
     }
   }
+
   &__img {
     @include mobile-padding;
     @include tablet {
@@ -539,6 +572,7 @@
       justify-content: space-around;
       padding: 0;
     }
+
     &--size {
       width: 2rem;
       height: 2rem;
@@ -548,9 +582,11 @@
       }
     }
   }
+
   &-logo1__header {
     display: none;
     visibility: none;
+
     &--heading {
       @include logo;
       text-decoration: none;
@@ -558,6 +594,7 @@
     }
 
     @include tablet {
+
       @include display(flex, row);
       font-family: "avenir-regular";
       padding: 0;
@@ -567,6 +604,7 @@
       margin: auto 0 auto auto;
     }
   }
+
   &__div {
     @include display(flex, column);
     height: 35rem;
@@ -581,6 +619,7 @@
     @include desktop {
       width: 60%;
     }
+
     &-text {
       @include display(flex, column);
       margin-bottom: 2rem;
@@ -591,6 +630,7 @@
       @include desktop {
         width: 26%;
       }
+
       &--para {
         margin: 0;
         @include mob-footer-body-font($primary-color3);
@@ -600,16 +640,18 @@
           @include tab-footer-body-font($primary-color3);
         }
       }
+
       &--link {
         text-decoration: none;
       }
     }
   }
+
   &-logo2__header {
     background-color: $primary-color2;
-
     @include mobile-padding;
     padding-bottom: 0;
+
     &--heading {
       @include logo;
       text-decoration: none;
@@ -624,6 +666,7 @@
 
   &-logo2__text {
     @include display(flex, column);
+
     &--para {
       @include mobile-padding;
       @include mob-footer-body-font($primary-color3);

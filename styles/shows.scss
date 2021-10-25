@@ -26,6 +26,7 @@
     @include display(flex, row);
     height: 85vh;
   }
+
   &__header {
     height: 50%;
     @include display(flex, column);
@@ -38,6 +39,7 @@
       width: 40rem;
       padding-left: 8rem;
     }
+
     &-1 {
       &--heading-line-1 {
         @include mob-page-header-font($primary-color3);
@@ -54,6 +56,7 @@
         }
       }
     }
+
     &-2 {
       &--heading-line-2 {
         @include mob-page-header-font($primary-color3);
@@ -71,6 +74,7 @@
       }
     }
   }
+
   &__song {
     height: 50%;
     width: 95%;
@@ -85,6 +89,7 @@
       padding-left: 8rem;
       padding-right: 8rem;
     }
+
     &--i-frame {
       height: 80%;
       padding-top: 0;
@@ -108,12 +113,14 @@
   @include desktop {
     @include display(flex, row);
   }
+
   &__left {
     @include desktop {
       padding-left: 8rem;
       width: 30%;
     }
   }
+
   &-heading {
     @include mobile-padding;
     padding-left: 0;
@@ -140,12 +147,12 @@
   }
 
   &__right {
-
     @include desktop {
       padding-right: 6rem;
       width: 70%;
     }
   }
+
   &__table {
     display: none;
     @include tablet {
@@ -157,6 +164,7 @@
       @include desktop {
         @include tablet-padding;
       }
+
       &-list {
         @include tablet {
         @include tab-body-font($primary-color6);
@@ -164,6 +172,7 @@
         width: 20%;
         }
       }
+
       &-hidden {
         visibility: hidden;
       }
@@ -171,12 +180,15 @@
   }
 
   &__show{
+
     :hover{
       background-color: $primary-color6;
     }
+
     :focus{
       background-color: $primary-color4;
     }
+
     :active{
       background-color: $primary-color4!important;
     }
@@ -186,7 +198,6 @@
   &-detail {
     border-bottom: 1px solid $primary-color4;
     padding-bottom: 2rem;
-
     @include tablet {
       @include tablet-padding;
       padding-top: 1.5rem;
@@ -196,10 +207,10 @@
       justify-content: space-between;
       align-items: center;
     }
-
     @include desktop{
       padding-right: 0;
     }
+
     &__text {
       @include mob-body-font($primary-color6);
       font-family: "avenir-demi";
@@ -207,19 +218,23 @@
         display: none;
       }
     }
+
     &__date {
       @include mob-body-font($primary-color2);
       font-family: "avenir-demi";
       width: 26%;
     }
+
     &__venue {
       @include mob-body-font($primary-color1);
       width: 24%;
     }
+
     &__location {
       @include mob-body-font($primary-color1);
       width: 26%;
     }
+
     &__button {
       width: 100%;
       @include mobile-padding;
