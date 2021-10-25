@@ -89,7 +89,7 @@ function handleConversationFormSubmit(event) {
   event.preventDefault();
   // create a new user object
   const newUser = {
-    name: event.target.conversation__name.value,
+    name: event.target.conversation_name.value,
     comment: event.target.conversation__comment.value,
   };
   // post new user

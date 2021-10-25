@@ -3,7 +3,7 @@
 @use "./partials/typography" as *;
 @use "./partials/mixins" as *;
 
-.header {
+.bandsite-header {
   background-color: $primary-color2;
   @include display(flex, column);
   @include tablet {
@@ -497,7 +497,7 @@
   }
 }
 
-.footer {
+.bandsite-footer {
   @include display(flex, column);
   background-color: $primary-color2;
   @include tablet {

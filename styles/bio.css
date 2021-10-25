@@ -350,27 +350,27 @@ template {
   font-family: "avenir-demi";
   src: url("../assets/font/AvenirNextLTPro-Demi.otf");
 }
-.header {
+.bandsite-header {
   background-color: #323232;
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 767px) {
-  .header {
+  .bandsite-header {
     display: flex;
     flex-direction: row;
     align-items: center;
   }
 }
 @media screen and (min-width: 1280px) {
-  .header {
+  .bandsite-header {
     height: 15vh;
   }
 }
-.header__nav {
+.bandsite-header__nav {
   margin: 1rem auto;
 }
-.header__nav--logo {
+.bandsite-header__nav--logo {
   text-decoration: none;
   font-family: "avenir-regular";
   font-weight: bold;
@@ -386,7 +386,7 @@ template {
   font-weight: normal;
 }
 @media screen and (min-width: 767px) {
-  .header__nav--logo {
+  .bandsite-header__nav--logo {
     padding-top: 3rem;
     padding-bottom: 2.25rem;
     padding-left: 2.25rem;
@@ -394,11 +394,11 @@ template {
   }
 }
 @media screen and (min-width: 767px) and (min-width: 1280px) {
-  .header__nav--logo {
+  .bandsite-header__nav--logo {
     padding: 3rem 0 0 8rem;
   }
 }
-.header__primary-nav {
+.bandsite-header__primary-nav {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -406,7 +406,7 @@ template {
   margin-bottom: 0;
   margin-top: 0;
 }
-.header__primary-nav-list {
+.bandsite-header__primary-nav-list {
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -415,7 +415,7 @@ template {
   color: #e1e1e1;
 }
 @media screen and (min-width: 767px) {
-  .header__primary-nav-list {
+  .bandsite-header__primary-nav-list {
     align-items: center;
     justify-content: center;
     width: 14%;
@@ -426,7 +426,7 @@ template {
     border-bottom: 0rem;
   }
 }
-.header__primary-nav-list--anchor {
+.bandsite-header__primary-nav-list--anchor {
   text-align: center;
   width: 100%;
   text-decoration: none;
@@ -438,21 +438,21 @@ template {
   padding-bottom: 1rem;
 }
 @media screen and (min-width: 767px) {
-  .header__primary-nav-list--anchor {
+  .bandsite-header__primary-nav-list--anchor {
     width: auto;
     padding: 2.55rem 0 2.55rem 0;
   }
 }
 @media screen and (min-width: 1280px) {
-  .header__primary-nav-list--anchor {
+  .bandsite-header__primary-nav-list--anchor {
     padding: 3rem 0 3rem 0;
   }
 }
-.header__primary-nav-list :hover {
+.bandsite-header__primary-nav-list :hover {
   font-weight: 700;
   color: #FFFFFF;
 }
-.header__primary-nav-list--current {
+.bandsite-header__primary-nav-list--current {
   font-weight: 700;
   color: #FFFFFF;
   border-bottom: 0.2rem solid #FFFFFF;
@@ -1135,13 +1135,13 @@ template {
   padding-left: 0;
 }
 
-.footer {
+.bandsite-footer {
   display: flex;
   flex-direction: column;
   background-color: #323232;
 }
 @media screen and (min-width: 767px) {
-  .footer {
+  .bandsite-footer {
     padding-top: 3rem;
     padding-bottom: 2.25rem;
     padding-left: 2.25rem;
@@ -1149,25 +1149,25 @@ template {
   }
 }
 @media screen and (min-width: 1280px) {
-  .footer {
+  .bandsite-footer {
     padding-left: 8rem;
     padding-right: 8rem;
   }
 }
 @media screen and (min-width: 767px) {
-  .footer__top {
+  .bandsite-footer__top {
     height: 5.75rem;
     display: flex;
     flex-direction: row;
   }
 }
 @media screen and (min-width: 767px) {
-  .footer__header {
+  .bandsite-footer__header {
     padding-top: 0;
     padding-bottom: 0;
   }
 }
-.footer__header--heading {
+.bandsite-footer__header--heading {
   width: 22.5rem;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
@@ -1181,7 +1181,7 @@ template {
   padding-bottom: 0;
 }
 @media screen and (min-width: 767px) {
-  .footer__header--heading {
+  .bandsite-footer__header--heading {
     padding: 1.5rem 0 0 0;
     font-family: "avenir-bold";
     font-weight: bold;
@@ -1193,35 +1193,35 @@ template {
     margin-bottom: 0;
   }
 }
-.footer__img {
+.bandsite-footer__img {
   padding-top: 1.5rem;
   padding-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 @media screen and (min-width: 767px) {
-  .footer__img {
+  .bandsite-footer__img {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding: 0;
   }
 }
-.footer__img--size {
+.bandsite-footer__img--size {
   width: 2rem;
   height: 2rem;
   margin: auto 1rem 0 auto;
 }
 @media screen and (min-width: 767px) {
-  .footer__img--size {
+  .bandsite-footer__img--size {
     margin: auto 1rem;
   }
 }
-.footer-logo1__header {
+.bandsite-footer-logo1__header {
   display: none;
   visibility: none;
 }
-.footer-logo1__header--heading {
+.bandsite-footer-logo1__header--heading {
   font-family: "avenir-regular";
   font-weight: bold;
   font-size: 1.5rem;
@@ -1233,7 +1233,7 @@ template {
   font-weight: normal;
 }
 @media screen and (min-width: 767px) {
-  .footer-logo1__header {
+  .bandsite-footer-logo1__header {
     display: flex;
     flex-direction: row;
     font-family: "avenir-regular";
@@ -1242,11 +1242,11 @@ template {
   }
 }
 @media screen and (min-width: 1280px) {
-  .footer-logo1__header {
+  .bandsite-footer-logo1__header {
     margin: auto 0 auto auto;
   }
 }
-.footer__div {
+.bandsite-footer__div {
   display: flex;
   flex-direction: column;
   height: 35rem;
@@ -1256,7 +1256,7 @@ template {
   padding-right: 1rem;
 }
 @media screen and (min-width: 767px) {
-  .footer__div {
+  .bandsite-footer__div {
     padding-left: 0;
     height: 8rem;
     flex-wrap: wrap;
@@ -1265,27 +1265,27 @@ template {
   }
 }
 @media screen and (min-width: 1280px) {
-  .footer__div {
+  .bandsite-footer__div {
     width: 60%;
   }
 }
-.footer__div-text {
+.bandsite-footer__div-text {
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
 }
 @media screen and (min-width: 767px) {
-  .footer__div-text {
+  .bandsite-footer__div-text {
     width: 29%;
     margin: 0;
   }
 }
 @media screen and (min-width: 1280px) {
-  .footer__div-text {
+  .bandsite-footer__div-text {
     width: 26%;
   }
 }
-.footer__div-text--para {
+.bandsite-footer__div-text--para {
   margin: 0;
   font-family: "avenir-regular";
   font-weight: normal;
@@ -1296,7 +1296,7 @@ template {
   line-height: 1.3rem;
 }
 @media screen and (min-width: 767px) {
-  .footer__div-text--para {
+  .bandsite-footer__div-text--para {
     font-family: "avenir-regular";
     font-weight: normal;
     font-size: 0.8125rem;
@@ -1304,10 +1304,10 @@ template {
     color: #FFFFFF;
   }
 }
-.footer__div-text--link {
+.bandsite-footer__div-text--link {
   text-decoration: none;
 }
-.footer-logo2__header {
+.bandsite-footer-logo2__header {
   background-color: #323232;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
@@ -1315,7 +1315,7 @@ template {
   padding-right: 1rem;
   padding-bottom: 0;
 }
-.footer-logo2__header--heading {
+.bandsite-footer-logo2__header--heading {
   font-family: "avenir-regular";
   font-weight: bold;
   font-size: 1.5rem;
@@ -1327,17 +1327,17 @@ template {
   font-weight: normal;
 }
 @media screen and (min-width: 767px) {
-  .footer-logo2__header {
+  .bandsite-footer-logo2__header {
     padding-left: 0;
     display: none;
     visibility: hidden;
   }
 }
-.footer-logo2__text {
+.bandsite-footer-logo2__text {
   display: flex;
   flex-direction: column;
 }
-.footer-logo2__text--para {
+.bandsite-footer-logo2__text--para {
   padding-top: 1.5rem;
   padding-bottom: 1rem;
   padding-left: 1rem;
@@ -1351,7 +1351,7 @@ template {
   padding-top: 0;
 }
 @media screen and (min-width: 767px) {
-  .footer-logo2__text--para {
+  .bandsite-footer-logo2__text--para {
     padding: 0;
     font-family: "avenir-regular";
     font-weight: normal;
